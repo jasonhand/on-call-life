@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>availability | On Call Life</title>
+    <link>/tags/availability/</link>
+      <atom:link href="/tags/availability/index.xml" rel="self" type="application/rss+xml" />
+    <description>availability</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>availability</title>
+      <link>/tags/availability/</link>
+    </image>
+    
+    <item>
+      <title>Exploring the Availability Aspect of Reliability</title>
+      <link>/post/exploring-the-availability-aspect-of-reliability/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-the-availability-aspect-of-reliability/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Can people reach a website or service?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is typically the first thing people think of when talking about reliability. Can &amp;ldquo;the thing&amp;rdquo; be reached (and used) when expected?&lt;/p&gt;
+&lt;p&gt;This is important from the perspective of both external and internal users who depend on a service. Because of this, availability is a good place to start discussing reliability.&lt;/p&gt;
+&lt;h2 id=&#34;availability&#34;&gt;Availability&lt;/h2&gt;
+&lt;p&gt;If a service can&amp;rsquo;t be reached at all then it is of no value to its intended user and in some cases detrimental. Availability lets us communicate whether or not our service is ready to go.&lt;/p&gt;
+&lt;p&gt;In terms of monitoring for availability, we could set alerts for low disk space of service. This could tip us off to an imminent problem that is known to impact the availability of a service.&lt;/p&gt;
+&lt;p&gt;We could also examine logs that tell us in aggregate what the customer is experiencing when attempting to communicate with our service. Are they gaining access or receiving responses? Or are they seeing 404 and 501 error codes?&lt;/p&gt;
+&lt;p&gt;Answering those questions gives a more accurate picture of the availability of your service. Just because everything appears to be working, does not mean that is what your user is seeing.&lt;/p&gt;
+&lt;p&gt;You can&amp;rsquo;t always do something about availability. The number of hops between a website and a person&amp;rsquo;s mobile device is astounding. Failure could happen at any point between them.&lt;/p&gt;
+&lt;p&gt;The closer we can measure that experience from their perspective, the better off we&amp;rsquo;ll be in measuring our availability.&lt;/p&gt;
+&lt;p&gt;The next aspect of reliability that often gets a lot of attention is latency. Despite your service being available, if it takes too long to communicate back and forth, there&amp;rsquo;s no denying it is a bad experience for the user. In the high speed world, patience for slow services is nearly non-existent.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/exploring-the-latency-aspect-of-reliability/&#34;&gt;Exploring the Latency Aspect of Reliability&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>coverage | On Call Life</title>
+    <link>/tags/coverage/</link>
+      <atom:link href="/tags/coverage/index.xml" rel="self" type="application/rss+xml" />
+    <description>coverage</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>coverage</title>
+      <link>/tags/coverage/</link>
+    </image>
+    
+    <item>
+      <title>Exploring the Coverage Aspect of Reliability</title>
+      <link>/post/exploring-the-coverage-aspect-of-reliability/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-the-coverage-aspect-of-reliability/</guid>
+      <description>&lt;p&gt;Coverage refers to how much of the data that you expected to process was
+actually processed.&lt;/p&gt;
+&lt;p&gt;Reliability means getting the whole job done, every time. How can we monitor for that in a way that indicates what it&amp;rsquo;s like as a user?&lt;/p&gt;
+&lt;p&gt;Another aspect of reliablity that is closely tied to data is our next one, durability. It is really crucial that data written to the service can be read back out again later when desired.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/exploring-the-durability-aspect-of-reliability/&#34;&gt;Exploring the Durability Aspect of Reliability&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

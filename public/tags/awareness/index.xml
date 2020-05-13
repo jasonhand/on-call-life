@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>awareness | On Call Life</title>
+    <link>/tags/awareness/</link>
+      <atom:link href="/tags/awareness/index.xml" rel="self" type="application/rss+xml" />
+    <description>awareness</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>awareness</title>
+      <link>/tags/awareness/</link>
+    </image>
+    
+    <item>
+      <title>Monitoring For Operational Awareness</title>
+      <link>/post/monitoring-for-operational-awareness/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/monitoring-for-operational-awareness/</guid>
+      <description>&lt;p&gt;Sustainably achieving an appropriate level of reliability first requires that
+you know what’s going on with your systems and services. You find that out by
+monitoring. Before you can effectively monitor for reliability, however, you
+must have a reasonable level of operational awareness. This means you need to
+understand how systems in production are functioning in order to work toward
+reliability of those systems.&lt;/p&gt;
+&lt;p&gt;Today’s production environments and the paths by which we deploy systems and
+applications are complex. Thus, it is not uncommon to have to do a bit of
+discovery to obtain an operational awareness baseline. Some questions to ask
+include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;What exactly is running in production?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Given a specific application, what are its component parts?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Which of those parts communicate with which other parts?&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are also some more complex factors that you’ll want to examine to give you
+a better understanding of your systems and services and how to make them more
+reliable.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;How did the app or service perform in the past?&lt;/strong&gt; It’s true that “past
+performance is no guarantee of future results.” However, knowledge about
+past performance can be useful in calibrating expectations, and awareness of
+past outages can provide you with a sense of potential failure modes that
+you should incorporate into your thought processes around reliability.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;What is the socio-technical context?&lt;/strong&gt; In other words, who owns or cares
+about the service or app? How did it get deployed? Information about the
+stakeholders, as well as knowing, for example, whether it was deployed by
+hand or via an automated process can have many ramifications when we begin
+to make updates to improve reliability.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The answers to all these questions will help you to build a baseline around
+“normal” behavior.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/monitoring-for-reliability/&#34;&gt;Monitoring For Reliability&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

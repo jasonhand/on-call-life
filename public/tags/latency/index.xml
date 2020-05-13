@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>latency | On Call Life</title>
+    <link>/tags/latency/</link>
+      <atom:link href="/tags/latency/index.xml" rel="self" type="application/rss+xml" />
+    <description>latency</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>latency</title>
+      <link>/tags/latency/</link>
+    </image>
+    
+    <item>
+      <title>Exploring the Latency Aspect of Reliability</title>
+      <link>/post/exploring-the-latency-aspect-of-reliability/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-the-latency-aspect-of-reliability/</guid>
+      <description>&lt;p&gt;Latency refers to the amount of delay between a request and a response.&lt;/p&gt;
+&lt;h2 id=&#34;slow-is-the-new-down&#34;&gt;Slow is the New Down&lt;/h2&gt;
+&lt;p&gt;Today’s users have high expectations.&lt;/p&gt;
+&lt;p&gt;They demand fast performance and have little patience with a site or service that leaves them waiting. Reliability means the site is not only available, but available in a reasonable amount of time.&lt;/p&gt;
+&lt;p&gt;Especially for external customer interactions – for example, when a customer visits your company’s website – it is critical that the service respond as quickly as possible. A slow website can drive your customers to your competitors.&lt;/p&gt;
+&lt;p&gt;Azure is always 
+&lt;a href=&#34;https://docs.microsoft.com/en-us/azure/networking/azure-network-latency/?wt.mc_id=oncalllife-blog-jahand&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;monitoring latency from points all around the world&lt;/a&gt; to ensure speeds are within pre-defined limits.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.microsoft.com/en-us/azure/networking/media/azure-network-latency/azure-network-latency.png&#34; alt=&#34;azure latency&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s say your service is available and fast, what else might users care about?&lt;/p&gt;
+&lt;p&gt;If your service returns the wrong thing, it’s not reliable in the eyes of your customers.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s supposed to work as advertised. If it returns the wrong results, calculates a bad value, or generally doesn&amp;rsquo;t do what it&amp;rsquo;s supposed to do &amp;ldquo;correctly&amp;rdquo;, it&amp;rsquo;s not relable to the user. Who wants to use a service that can&amp;rsquo;t calculate for leap year, let alone manage your bank account?&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://azurespeedtest.azurewebsites.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Take a look at the latency of Azure datacenters from your current location&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://azurespeedtest.azurewebsites.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;latency-speed.gif&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://azurespeed.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Another one can be found here:&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://azurespeed.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;latency-test.gif&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/exploring-the-correctness-aspect-of-reliability/&#34;&gt;Exploring the Correctness Aspect of Reliability&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

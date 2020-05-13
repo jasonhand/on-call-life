@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>runbook | On Call Life</title>
+    <link>/tags/runbook/</link>
+      <atom:link href="/tags/runbook/index.xml" rel="self" type="application/rss+xml" />
+    <description>runbook</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 02 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>runbook</title>
+      <link>/tags/runbook/</link>
+    </image>
+    
+    <item>
+      <title>Building Troubleshooting Guides in Azure Monitor</title>
+      <link>/post/building-troubleshooting-guides-in-azure-monitor/</link>
+      <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/post/building-troubleshooting-guides-in-azure-monitor/</guid>
+      <description>&lt;p&gt;Also referred to as 
+&lt;a href=&#34;https://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-workbooks/?WT.mc_id=oncalllife-blog-jahand&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Workbooks in Azure Monitor&lt;/a&gt;, interactive reports can be quickly built to provide critical information to first responders as they begin to investigate and take early remediation efforts.&lt;/p&gt;
+&lt;p&gt;Guides can include data from sources such as logs, metrics, and more through visualizations like charts, grids, graphs, and text.&lt;/p&gt;
+&lt;p&gt;Everything displayed in the troubleshooting guide can be customized on the fly through parameters making it interactive.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/microsoft/Application-Insights-Workbooks/raw/master/Documentation/Images/WorkbookExample.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The name &lt;em&gt;Troubleshooting Guide&lt;/em&gt; is specific to the workbooks made available through Azure&amp;rsquo;s Application Insights. To view a gallery of templates or to create a new guide, select &lt;strong&gt;Troubleshooting Guide&lt;/strong&gt; from the Investigate section of the left navigation pane.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;troubleshooting-guide.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Troubleshooting guides are ultimately just JSON files, which means they can be handled just like code. You can put them in a repository right next to your code, infrastructure, deployment pipelines, and more.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;troubleshooting-guide-json.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;To view an example of a Troubleshooting Guide represented in JSON, 
+&lt;a href=&#34;https://github.com/microsoft/ignite-learning-paths-training-ops/blob/master/ops20/demos/02/TroubleshootingGuideGalleryTemplate.json&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;take a look at this sample&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Troubleshooting Guides can often provide the jumpstart first responders need to begin diagnosing. By freeing up their cognitive tasks for something other than remembering where resources are, engineers can make a positive difference faster.&lt;/p&gt;
+&lt;p&gt;Supplying context and guidance rather than rigid step-by-step processes allows engineers to be creative in novel situations. If an engineer can follow each step of a check list to recover from the problem then it is time to automate that &amp;ldquo;known&amp;rdquo; fix and free up incident response for scenarios that couldn&amp;rsquo;t have been predicted or fixed through a linear process.&lt;/p&gt;
+&lt;p&gt;Keeping people informed is a big driving force behind efforts during incident response. Troubleshooting guides are no exception. When engineers (also stakeholders in the incident) are informed with objective data, they can take appropriate action based on information they have available to them.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/updating-stakeholders/&#34;&gt;Updating Stakeholders&lt;/a&gt; can be done in many ways. Let&amp;rsquo;s take a look at a few examples.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>learning | On Call Life</title>
+    <link>/tags/learning/</link>
+      <atom:link href="/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>learning</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>learning</title>
+      <link>/tags/learning/</link>
+    </image>
+    
+    <item>
+      <title>Understanding Why We Learn From Incidents</title>
+      <link>/post/understanding-why-we-learn-from-incidents/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/understanding-why-we-learn-from-incidents/</guid>
+      <description>&lt;p&gt;Incident response doesn’t stop when the incident is over. They say those who
+don’t study history are doomed to repeat it. Likewise, those who don’t study,
+analyze, and learn from the incidents they resolved are doomed to keep repeating
+the process, as well.&lt;/p&gt;
+&lt;p&gt;Your most important means of learning from incidents is the post-incident
+review.&lt;/p&gt;
+&lt;p&gt;When an incident occurs, your first reaction probably isn’t, “Hurray – a
+learning opportunity!” Your immediate priority is figuring out what went wrong
+and fixing it as quickly as possible, to reduce the impact on your customers and
+end users – as it should be.&lt;/p&gt;
+&lt;p&gt;However, once the incident has been resolved, it’s important to follow up and
+benefit from the discovery of whatever mistakes or circumstances led to the
+failure. Doing so will help you prevent the same thing from happening again and
+will also help you understand what tactics do and don’t work best when
+responding to any kind of incident in the future.&lt;/p&gt;
+&lt;p&gt;The post-incident review is part of the analysis phase of the incident response
+lifecycle. Not all post-incident reviews are created equal. There are different
+ways to approach the process, and too much focus on certain aspects of the
+problem or framing questions in the wrong way can reduce the value of the
+review.&lt;/p&gt;
+&lt;p&gt;We want to now explore the best path towards generating actionable introspection about the systems we co-create.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/understanding-how-complex-systems-fail/&#34;&gt;Understanding How Complex Systems Fail&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

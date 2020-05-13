@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>response | On Call Life</title>
+    <link>/tags/response/</link>
+      <atom:link href="/tags/response/index.xml" rel="self" type="application/rss+xml" />
+    <description>response</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>response</title>
+      <link>/tags/response/</link>
+    </image>
+    
+    <item>
+      <title>Exploring Why Incidents are Unexpected</title>
+      <link>/post/exploring-why-incidents-are-unexpected/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-why-incidents-are-unexpected/</guid>
+      <description>&lt;p&gt;In other words &amp;hellip; unplanned Work&lt;/p&gt;
+&lt;p&gt;Most of what we as engineers and technologists do is planned work.&lt;/p&gt;
+&lt;p&gt;We spend a lot of time and effort understanding the work in front of us.&lt;/p&gt;
+&lt;p&gt;We calculate story points.  We plan sprints. We have a pretty good idea on what we are supposed to be working on.&lt;/p&gt;
+&lt;p&gt;So, when an incident occurs, it is disruptive. It is&amp;hellip; unplanned work.&lt;/p&gt;
+&lt;p&gt;Often, we view this as a terrible thing, but in reality, incidents are actually “investments” in supplying the value we are trying to deliver to end users.&lt;/p&gt;
+&lt;p&gt;We just need to change how we look at incidents.&lt;/p&gt;
+&lt;p&gt;Next we&amp;rsquo;ll discuss the full lifecycle of an incident. From detection to analysis and everything in between. When we start to view incidents through a new lense and begin analyzing for opportunities to learn, you&amp;rsquo;ll begin to see your systems for what they are and why having a response plan in place makes sense.&lt;/p&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/understanding-the-full-lifecycle-of-an-incident&#34;&gt;Understanding the Full Lifecycle of An Incident&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Identifying the Primary Responder</title>
+      <link>/post/identifying-the-primary-responder/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/identifying-the-primary-responder/</guid>
+      <description>&lt;p&gt;The first role we need to talk about is the “Primary Responder” – the Primary “On-call” engineer.&lt;/p&gt;
+&lt;p&gt;This person is expected to acknowledge their awareness of an incident once the alert has been received.&lt;/p&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/identifying-the-secondary-responder/&#34;&gt;Identifying the Secondary Responder&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Identifying the Response Phase of an Incident</title>
+      <link>/post/identifying-the-incident-response-phase/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/identifying-the-incident-response-phase/</guid>
+      <description>&lt;p&gt;Once our detection efforts have been configured to send actionable alerts to the people who build the systems, we need to make sure they are sending those alerts to the &lt;em&gt;right&lt;/em&gt; people.&lt;/p&gt;
+&lt;h2 id=&#34;right-people&#34;&gt;Right People&lt;/h2&gt;
+&lt;p&gt;How do you know who the right people are? In most cases it is situational. A few things that can be done to help establish some formatlity and standard around responding to incidents is through the use of roles, rosters, and rotations. We&amp;rsquo;ll go more in depth on what each of those are soon.&lt;/p&gt;
+&lt;h2 id=&#34;tooling&#34;&gt;Tooling&lt;/h2&gt;
+&lt;p&gt;The right person for the job needs the right tools for the job. If someone is responding to an issue they need to get busy immediately. Making sure the right monitoring, communications, access, and documentation is provided is also important. People should be familiar with the tooling and know how and where to find additional resources to help diagnose, theorize, and triage.&lt;/p&gt;
+&lt;h3 id=&#34;diagnose&#34;&gt;Diagnose&lt;/h3&gt;
+&lt;p&gt;Everyone experiences problems. Sometimes routinely throughout the day in fact. When something doesn&amp;rsquo;t go as expected or breaks entirely our impulse is to fix it. In order to do so we must first have a look at what&amp;rsquo;s currently observable. What is the status? Who and what is impacted? What hints or clues are there? What information do we have to work with?&lt;/p&gt;
+&lt;p&gt;What do we know &lt;em&gt;right now?&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;theorize&#34;&gt;Theorize&lt;/h3&gt;
+&lt;p&gt;Once information has been obtained, we begin to theorize next best steps.
+What action can we take to minimize or stop the impact? What are the repurcussions of that action? Will something else go wrong? If we take one action, what result do we expect? In very brief moments we are creatively thinking through as many possible scenarios to restore service as we can. And then stack ranking them based on our own calculations on the probability of success.&lt;/p&gt;
+&lt;h3 id=&#34;triage&#34;&gt;Triage&lt;/h3&gt;
+&lt;p&gt;At some point we all need help. That could be access to an admin account, theories from subject matter experts, someone to amplify updates to a broader audience. Rarely are incidents viewed as a success if only a single person was involved.&lt;/p&gt;
+&lt;p&gt;Regardless of the size of your response team, by isolating it as a phase in the incident lifecycle, we can examine this section of the timeline for improvements on how we coordinate our response. If it took an excessive amount of time for the engineering team to correct the payment processor problem simply because it took too long to find the right person, with the right tool, and with the appropriate level of access then there are some clear opportunities for improvement right there.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/identifying-the-incident-remediation-phase/&#34;&gt;Identifying the Remediation Phase of an Incident&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Identifying the Secondary Responder</title>
+      <link>/post/identifying-the-secondary-responder/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/identifying-the-secondary-responder/</guid>
+      <description>&lt;p&gt;Then we have the secondary responder – who is there as back up -Another engineer who can step in if the primary responder is unavailable or unreachable. Or if they just need another pair of eyes.&lt;/p&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/identifying-the-incident-commander/&#34;&gt;Identifying The Incident Commander&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Understanding the Foundations of Incident Response</title>
+      <link>/post/understanding-the-foundations-of-incident-response/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/understanding-the-foundations-of-incident-response/</guid>
+      <description>&lt;p&gt;The foundations of building reliable systems including a good incident response plan, have to start with determining “Who is expected to respond to problems?” and “How do let them know?”.&lt;/p&gt;
+&lt;p&gt;The best place to start, is to design what is to establish roles, rosters, and rotations.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Roles :&lt;/strong&gt; Well defined responsibilities and expectations of individuals on an on-call team (or roster). The &lt;strong&gt;Primary Responder&lt;/strong&gt;, for example.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Rosters :&lt;/strong&gt; A group of individuals, each with their own assigned role and understood responsibilities and expectations. The mobile &lt;em&gt;&amp;ldquo;on-call&amp;rdquo;&lt;/em&gt; team, consisting of multiple members each with thier own assigned role.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Rotations :&lt;/strong&gt; A scheduled shift for individuals where they are &lt;em&gt;&amp;ldquo;on-call&amp;rdquo;&lt;/em&gt; for a defined period of time. A 24 x n rotation where someone is the** Primary Responder**, for example.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s worth looking at each of these groups a little closer, so let&amp;rsquo;s do that now.&lt;/p&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/establishing-oncall-roles/&#34;&gt;Establishing On-call Roles&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

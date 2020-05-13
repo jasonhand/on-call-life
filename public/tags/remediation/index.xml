@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>remediation | On Call Life</title>
+    <link>/tags/remediation/</link>
+      <atom:link href="/tags/remediation/index.xml" rel="self" type="application/rss+xml" />
+    <description>remediation</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>remediation</title>
+      <link>/tags/remediation/</link>
+    </image>
+    
+    <item>
+      <title>Improving the Remediation of Incidents</title>
+      <link>/post/improving-the-remediation-of-incidents/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/improving-the-remediation-of-incidents/</guid>
+      <description>&lt;p&gt;Although thinking of incidents in terms of phases allows for us to shorten each in their own unique ways, responding to and remediating an incident often begin to blur. Especially when actions to mitigate or improve the situation, have the opposite result.&lt;/p&gt;
+&lt;p&gt;Now that we’ve covered the foundations of building a good incident response plan, let&amp;rsquo;s talk about remediation efforts and how 
+&lt;a href=&#34;/post/supplying-context-and-guidance/&#34;&gt;Supplying Context &amp;amp; Guidance&lt;/a&gt; to on-call engineers rather than step by step procedures can dramatically help reduce the impact of an incident.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Supplying Context and Guidance</title>
+      <link>/post/supplying-context-and-guidance/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/supplying-context-and-guidance/</guid>
+      <description>&lt;p&gt;During an active incident, it&amp;rsquo;s often difficult to recall information such as system names, IP addresses, admin logins, location of logs, and more. Remembering where to find dasbhoards, metrics, and reports that could be helpful is often difficult.&lt;/p&gt;
+&lt;p&gt;To build a proactive response plan to managing incidents it&amp;rsquo;s important to provide some useful context and guidance for the first responders to begin investigating, triaging, and escalating.&lt;/p&gt;
+&lt;p&gt;Where should the first responder start? Is there a dashboard that provides a good representation of the health of the system from the customer&amp;rsquo;s perspective? Do responders know how to access it? Does it require a login? Can it be viewed from a mobile device, remotely? These are all considerations for making it easier for on-call responders to begin restoring service as quickly as possible.&lt;/p&gt;
+&lt;p&gt;Typically, first responders will need the assistance of others with additional expertise and experience. Or maybe just a second pair of eyes. Understanding how on-call engineers should escalate incidents, helps cut out any delay should exacerbated engineers need to reach out for assistance.&lt;/p&gt;
+&lt;p&gt;When discussing incident response tacticcs, ask yourselves what metrics, tools, links or general resources might be helpful in those early moments?&lt;/p&gt;
+&lt;p&gt;Once we&amp;rsquo;ve answered that question we can begin building resources in a non-prescriptive way. Objective data and tools that can be provided to help assist in the efforts to fix the problems.&lt;/p&gt;
+&lt;p&gt;Often &amp;ldquo;Runbooks&amp;rdquo; (or playbooks) serve this purpose, automating some of the remediation steps that are known to help recover from the problem.&lt;/p&gt;
+&lt;p&gt;Automation can be helpful in many ways during an incident. However, tools that provide context and guidance to allow engineers to make their own decisions towards next actions are meant to be more guides than anything.&lt;/p&gt;
+&lt;p&gt;Next, let&amp;rsquo;s look at 
+&lt;a href=&#34;/post/building-troubleshooting-guides-in-azure-monitor/&#34;&gt;Building Troubleshooting Guides in Azure Monitor&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

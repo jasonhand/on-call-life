@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.7.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Jason Hand">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="You can use SLIs and SLOs to set appropriate goals based on the different aspects of reliability and to determine whether you are meeting those goals, using simple calculations and a basic recipe. This is an operational practice you can adopt to create a feedback loop in your organization to improve reliability. SLIs and SLOs can transform the reliability discussion and bring about positive culture change within your organization.
+In this module thus far, you’ve learned about some useful tools that you can use to monitor for reliability, and you know how to search and sort the data that you collect.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/measurements-of-reliability/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu16bcbd491f2e99bfd4ff72c82967aff2_31445_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu16bcbd491f2e99bfd4ff72c82967aff2_31445_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/post/measurements-of-reliability/">
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="On Call Life">
+  <meta property="og:url" content="/post/measurements-of-reliability/">
+  <meta property="og:title" content="Measurements of Reliability | On Call Life">
+  <meta property="og:description" content="You can use SLIs and SLOs to set appropriate goals based on the different aspects of reliability and to determine whether you are meeting those goals, using simple calculations and a basic recipe. This is an operational practice you can adopt to create a feedback loop in your organization to improve reliability. SLIs and SLOs can transform the reliability discussion and bring about positive culture change within your organization.
+In this module thus far, you’ve learned about some useful tools that you can use to monitor for reliability, and you know how to search and sort the data that you collect."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-03-05T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-03-05T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/measurements-of-reliability/"
+  },
+  "headline": "Measurements of Reliability",
+  
+  "datePublished": "2020-03-05T00:00:00Z",
+  "dateModified": "2020-03-05T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Jason Hand"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "On Call Life",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu16bcbd491f2e99bfd4ff72c82967aff2_31445_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "You can use SLIs and SLOs to set appropriate goals based on the different aspects of reliability and to determine whether you are meeting those goals, using simple calculations and a basic recipe. This is an operational practice you can adopt to create a feedback loop in your organization to improve reliability. SLIs and SLOs can transform the reliability discussion and bring about positive culture change within your organization.\nIn this module thus far, you’ve learned about some useful tools that you can use to monitor for reliability, and you know how to search and sort the data that you collect."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Measurements of Reliability | On Call Life</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">On Call Life</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">On Call Life</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Articles</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Measurements of Reliability</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Mar 5, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>You can use SLIs and SLOs to set appropriate goals based on the different
+aspects of reliability and to determine whether you are meeting those goals,
+using simple calculations and a basic recipe. This is an operational practice
+you can adopt to create a feedback loop in your organization to improve
+reliability. SLIs and SLOs can transform the reliability discussion and bring
+about positive culture change within your organization.</p>
+<p>In this module thus far, you’ve learned about some useful tools that you can use
+to monitor for reliability, and you know how to search and sort the data that
+you collect. Now you’ll find out how to actually measure the success of your
+reliability efforts using Service Level Indicators (SLIs) and Service Level
+Objectives (SLOs).</p>
+<ul>
+<li>
+<p><strong>Service Level Objectives</strong> are simply the goals that you’ve set, based on
+the <em>appropriate level of reliability</em> that you want to reach.</p>
+</li>
+<li>
+<p><strong>Service Level Indicators</strong> are the measurements that you use to determine
+whether you have reached those goals; in other words, the <em>indicators</em> that
+your service is behaving reliably.</p>
+</li>
+</ul>
+<h2 id="service-level-indicators">Service Level Indicators</h2>
+<p>Site Reliability Engineering uses SLIs and SROs to measure the aspects of
+reliability that you learned about in Unit 2: availability, latency, throughput,
+coverage, correctness, fidelity, freshness, and durability, and whether you are
+meeting expectations in each applicable area.</p>
+<h2 id="what-to-measure">What to measure</h2>
+<p>The first question to ask in relation to the aspect you want to measure is
+<em>what</em> to measure.</p>
+<p><strong>Example #1: Measure availability</strong></p>
+<p>How would you determine the availability of a web server?</p>
+<p>You can do this by measuring the number of HTTP calls the server received and
+the number to which it successfully responded. This ratio of successful calls to
+total calls gives you an understanding of the server’s reliability. Multiplying
+the ratio by 100 gives you a percentage.</p>
+<p>For example, if the ratio is 0.5 and you multiply by 100, you can conclude that
+the web server has been available only 50% of the time.</p>
+<p><strong>Example #2: Measure latency</strong></p>
+<p>To get an idea of the latency of the web service, you can measure the number of
+operations that were completed in fewer than 10 milliseconds against the number
+of total operations.</p>
+<p>If, for example, dividing the first number by the second gives you a ratio of
+0.8, and you multiply this by 100, your service has an 80% success rate by this
+measurement.</p>
+<h2 id="where-to-measure">Where to measure</h2>
+<p>To have a clear picture of your reliability based on SLIs, you need to know not
+only what was measured, but also <em>where</em> the measurement was taken.</p>
+<p>For example, in measuring the availability of the web server above, you need to
+specify whether the number of calls was measured at the load balancer or at the
+server. Likewise, when measuring the latency of the web service, you should note
+that the number of operations was measured at the client.</p>
+<p>Why is this so crucial? If the purpose is to create a feedback loop in your
+organization, in which you are able to have conversations about reliability
+using objective data, it is important for the people having these conversations
+to be using the same data.</p>
+<p>To use a previous example, if you are trying to determine whether a web service
+is meeting expectations and one person looks at data collected at the server
+itself while another looks at data collected at the load balancer in front of
+that web server, you may be looking at radically different sets of numbers. The
+information collected from the web server itself only reflects the traffic that
+actually reached that server. If there was an issue with the load balancer or
+the network and half the packets never reached the web server, the two people
+will have a very different picture of the situation, especially when it comes to
+total number of requests.</p>
+<p>This leads to the logical question: where is the best place to measure SLIs?
+Unfortunately, there is not a universally “correct” answer. It’s a decision you
+must make with an understanding that there are tradeoffs either way.</p>
+<p>The key thing to keep in mind is based on our “prime directive” of reliability
+measurement: <em>Reliability should be measured from the customer’s perspective.</em>
+Thus, most of the time, you should measure at the point that most accurately
+reflects the customer’s experience.</p>
+<p>(Placeholder: SLI demo video here? Or create an exercise?)</p>
+<h2 id="service-level-objectives">Service Level Objectives</h2>
+<p>Now you know how to measure reliability using SLIs, but the ratios and
+percentages that you’ve calculated only get you halfway toward fulfilling the
+goal of site reliability engineering. You can now say the web server in our
+example is 50% reliable, but is that the <em>appropriate level of reliability</em> as
+discussed in our definition of SRE?</p>
+<p>It&rsquo;s also useful to know the period of time to which that reliability level
+applied. For how long was that 50% success rate maintained?</p>
+<p>To answer these questions, you need to look at Service Level Objectives. SLOs
+are statements of the objective you have from a reliability standpoint, based on
+customer expectations. The basic recipe for creating an SLO consists of these
+ingredients:</p>
+<ul>
+<li>
+<p><strong>The “thing” you’re going to measure –</strong> number of requests, storage
+checks, operations; <em>what</em> you’re measuring.</p>
+</li>
+<li>
+<p><strong>The desired proportion</strong> – for example, “successful 50% of the time,” “can
+read 99.9% of the time,” “return in 10ms 90% of the time.”</p>
+</li>
+<li>
+<p><strong>The time</strong> – what timeframe are you measuring: the last 10 minutes, during
+the last quarter, in the previous 30 days, etc.?</p>
+<p>Putting these components together and including the important “where”
+information, a sample SLO might look like this:</p>
+<p>“90% of HTTP requests as reported by the load balancer succeeded in the last
+30 day window.”</p>
+<p>(Placeholder: Basic SLO recipe graphic from Slide #94)</p>
+<p>Similarly, a basic SLO measuring latency might look like this:</p>
+<p>(Placeholder: Basic SLO recipe graphic from Slide #95)</p>
+<p>Start with simple, basic SLOs such as these when you introduce the practice
+into your organization. You can create more complex SLOs later if needed.</p>
+<p>(Placeholder: SLO demo video here? Or create an exercise?)</p>
+</li>
+</ul>
+
+    </div>
+
+    
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/jasonhand/academic-kickstart/edit/master/content/post/measurements-of-reliability/index.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/measurements/">measurements</a>
+  
+  <a class="badge badge-light" href="/tags/reliability/">reliability</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/measurements-of-reliability/&amp;text=Measurements%20of%20Reliability" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/measurements-of-reliability/&amp;t=Measurements%20of%20Reliability" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/measurements-of-reliability/&amp;title=Measurements%20of%20Reliability" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Measurements%20of%20Reliability%20/post/measurements-of-reliability/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/examining-all-aspects-of-reliability/">Examining All Aspects of Reliability</a></li>
+      
+      <li><a href="/post/exploring-why-incidents-are-unexpected/">Exploring Why Incidents are Unexpected</a></li>
+      
+      <li><a href="/post/monitoring-for-reliability/">Monitoring For Reliability</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.a8d7005002cb4a052fd6d721e83df9ba.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

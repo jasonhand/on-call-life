@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>alerts | On Call Life</title>
+    <link>/tags/alerts/</link>
+      <atom:link href="/tags/alerts/index.xml" rel="self" type="application/rss+xml" />
+    <description>alerts</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>alerts</title>
+      <link>/tags/alerts/</link>
+    </image>
+    
+    <item>
+      <title>Defining Alerts</title>
+      <link>/post/defining-alerts/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/defining-alerts/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;An alert is something which requires a human to perform an action.&amp;rdquo; - Pagerduty 
+&lt;a href=&#34;https://response.pagerduty.com/oncall/alerting_principles/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Alerting Principles&amp;rdquo;&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To understand why alerting can create a problem, you need to think about the purpose of alerts and how they differ from other monitoring components.&lt;/p&gt;
+&lt;p&gt;Actionable alerts are &lt;em&gt;not&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Logs.&lt;/strong&gt; Alerts are not records of events; that’s the role of logs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Notifications.&lt;/strong&gt; Alerts are not intended to announce non-critical
+occurrences such as the completion of a software build.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Heartbeats.&lt;/strong&gt; Alerts shouldn’t be used to document failure of a heartbeat
+signal periodically sent between two systems at regular intervals.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Actionable alerts are used for situations in which you need a human to
+investigate and intervene to remediate the problem. Alerts should be
+communications that something exceptional or unexpected has happened that
+requires someone’s attention.&lt;/p&gt;
+&lt;p&gt;A lot of thought should be put in to how alerts are delivered and when it is necessary. 
+&lt;a href=&#34;https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-overview/?wt.mc_id=oncalllife-blog-jahand&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;More on how to configure alerts in Azure can be found here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If the event is something that the system can handle through automated
+processes, such as scaling resources within a preset limit, an alert is not
+necessary. A simple line in a log should suffice.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/understanding-actionable-alerts&#34;&gt;Understanding Actionable Alerts&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sending Actionable Alerts</title>
+      <link>/post/sending-actionable-alerts/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/sending-actionable-alerts/</guid>
+      <description>&lt;p&gt;Alerts play an important role in your reliability monitoring strategy, but in
+order to be helpful, they must be properly constructed for situations that
+warrant immediate human attention, and they should be devised with simplicity,
+scope, and context in mind.&lt;/p&gt;
+&lt;p&gt;Preferences on how alerts are delivered can be designed using 
+&lt;a href=&#34;https://docs.microsoft.com/en-us/azure/azure-monitor/platform/action-groups/?wt.mc_id=oncalllife-blog-jahand&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Action Groups&lt;/a&gt; in Azure.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.microsoft.com/en-us/azure/azure-monitor/platform/media/action-groups/action-group-define.png&#34; alt=&#34;Action Group&#34;&gt;&lt;/p&gt;
+&lt;p&gt;You have learned how to monitor and interact with indicators of
+the reliability of your systems and create reliability goals, but there is also
+an important way by which reliability interacts with you. That’s through Azure
+Monitor’s log alerts feature.&lt;/p&gt;
+&lt;p&gt;It’s easy to create log alerts using Azure Monitor where the signal is a log
+query in Log Analytics or Application Insights. However, there is a pitfall that
+you’ll want to avoid, to prevent derailing all the effort you have put into
+bringing SLIs and SLOs into your organization.&lt;/p&gt;
+&lt;p&gt;To understand this potential pitfall, review the definition of SRE:&lt;/p&gt;
+&lt;p&gt;“Site Reliability Engineering is an engineering discipline devoted to helping
+organizations &lt;strong&gt;sustainably&lt;/strong&gt; achieve the appropriate level of reliability in
+their systems, services, and products.”&lt;/p&gt;
+&lt;p&gt;Alerts are designed to notify you when there is a problem with your systems.
+However, when alerts are improperly configured, this can undermine your goal of
+sustainability. Log alert rules are stateless; they work only on the logic that
+you build into the query and they send an alert whenever the alert condition is
+“true.” Thus, it’s important to put some thoughts into constructing your alerts.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/defining-alerts&#34;&gt;Defining Alerts&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Understanding Actionable Alerts</title>
+      <link>/post/understanding-actionable-alerts/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/understanding-actionable-alerts/</guid>
+      <description>&lt;p&gt;To create effective actionable alerts, you must understand their components and
+characteristics. Actionable alerts have:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Simplicity&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Scope&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Context&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Simplicity is self-explanatory: make your alerts easy for you and others to
+understand, even if you’re reading them after being awakened at 2:00 a.m. Scope
+and context should be included in the content of the alert.&lt;/p&gt;
+&lt;p&gt;Let’s look at some elements that an actionable alert should always include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;The source:&lt;/strong&gt; information about where the alert is coming from. Many
+organizations have multiple monitoring systems in use at any one time and a
+large number of interconnected systems. It can save someone a tremendous
+amount of time if the alert says &amp;ldquo;This alert for payroll system thx-1138 is
+coming from Azure monitor subscription prod.&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;The problem:&lt;/strong&gt; information about what expectation has been violated. For
+example, &amp;ldquo;This server has been returning an error 30% of the time when it
+should have been returning errors less than 1% of the time.&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Impact and scope:&lt;/strong&gt; information about the effect or impact the situation
+has had or potentially will have and the scope of that impact (ideally,
+stated from the customer’s point of view).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Recommended action:&lt;/strong&gt; if possible, the alert should include what the
+person responding should do next, even if that is a pointer to a
+troubleshooting guide or some other documentation to find help in diagnosing
+and remediating this problem.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Including such helpful context will make operations practices around monitoring
+more sustainable and make responding to alerts easier.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/defining-incidents&#34;&gt;Defining Incidents&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

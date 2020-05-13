@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>devops, incident, foundations | On Call Life</title>
+    <link>/tags/devops-incident-foundations/</link>
+      <atom:link href="/tags/devops-incident-foundations/index.xml" rel="self" type="application/rss+xml" />
+    <description>devops, incident, foundations</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 10 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>devops, incident, foundations</title>
+      <link>/tags/devops-incident-foundations/</link>
+    </image>
+    
+    <item>
+      <title>2. Response</title>
+      <link>/project/response/</link>
+      <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/project/response/</guid>
+      <description>&lt;p&gt;Useful links:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://azure.microsoft.com/?wt.mc_id=oncalllife-blog-jahand&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;azure.microsoft.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://docs.microsoft.com/?wt.mc_id=oncalllife-blog-jahand&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;docs.microsoft.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://channel9.msdn.com/?wt.mc_id=oncalllife-blog-jahand&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;channel9.msdn.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://code.visualstudio.com/?wt.mc_id=oncalllife-blog-jahand&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code.visualstudio.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://cloudblogs.microsoft.com/?wt.mc_id=oncalllife-blog-jahand&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cloudblogs.microsoft.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://devblogs.microsoft.com/?wt.mc_id=oncalllife-blog-jahand&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;devblogs.microsoft.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://marketplace.visualstudio.com/?wt.mc_id=oncalllife-blog-jahand&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;marketplace.visualstudio.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://techcommunity.microsoft.com/?wt.mc_id=oncalllife-blog-jahand&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;techcommunity.microsoft.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>incidents | On Call Life</title>
+    <link>/tags/incidents/</link>
+      <atom:link href="/tags/incidents/index.xml" rel="self" type="application/rss+xml" />
+    <description>incidents</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 24 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>incidents</title>
+      <link>/tags/incidents/</link>
+    </image>
+    
+    <item>
+      <title>Creating Custom Incident Reports and Charts in Azure Boards</title>
+      <link>/post/creating-custom-incident-reports-and-charts-in-azure-boards/</link>
+      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/creating-custom-incident-reports-and-charts-in-azure-boards/</guid>
+      <description>&lt;p&gt;For the most part, incidents are unique.&lt;/p&gt;
+&lt;p&gt;Therefore the lessons learned will vary from problem to problem. However, it&amp;rsquo;s helpful to spot trends in response efforts to both identify what is working and what needs improvement.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s also helpful for engineering teams to have a sense of how frequent problems are arising and how quickly they are addressed and resolved.&lt;/p&gt;
+&lt;p&gt;When tracking incidents using Azure Boards, it&amp;rsquo;s quite simple to build reports and charts provide a high level snapshot of incident management efforts.&lt;/p&gt;
+&lt;h2 id=&#34;create-a-query&#34;&gt;Create a Query&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Select the &lt;strong&gt;Queries&lt;/strong&gt; option in the left navigation
+&lt;img src=&#34;queries.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Customize the query&lt;/p&gt;
+&lt;p&gt;Select the  clauses, fields, and values of interest to easily build queries and report back information such as &lt;em&gt;&amp;ldquo;Show me &lt;strong&gt;ANY&lt;/strong&gt; incident&amp;rdquo;&lt;/em&gt; in this example.
+&lt;img src=&#34;new-query.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;ll see the results at the bottom of the screen. In our case we only have two incidents. One is &lt;strong&gt;resolved&lt;/strong&gt; and one is &lt;strong&gt;acknowledged&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Save the query&lt;/p&gt;
+&lt;p&gt;Press the &lt;strong&gt;Save query&lt;/strong&gt; menu option and give it a name such as &lt;strong&gt;&amp;ldquo;All Incidents&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;save-query.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;create-a-graph&#34;&gt;Create a Graph&lt;/h2&gt;
+&lt;p&gt;To create visualizations of the queries, begin by changing to the &lt;strong&gt;Charts&lt;/strong&gt; option.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Click on &lt;strong&gt;Charts&lt;/strong&gt;
+&lt;img src=&#34;charts.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Click on &lt;strong&gt;New Charts&lt;/strong&gt;
+&lt;img src=&#34;new-chart.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Configure the chart&lt;/p&gt;
+&lt;p&gt;Choose the type of chart you want to use (Pie in this example). Give the chart a name, such as &amp;ldquo;All Incidents - Chart&amp;rdquo;. Choose how you want the data grouped, like &amp;ldquo;State&amp;rdquo; (&lt;strong&gt;New Incident, Resolved, Acknowledged, etc.&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;Choose a color to represent the data and press Ok.
+&lt;img src=&#34;configure-chart.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now you have a high level visual to communicate the state of incidents.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;chart-view.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now that we&amp;rsquo;ve discussed ways to help track the response of an incident, let&amp;rsquo;s take a moment to discuss ways of 
+&lt;a href=&#34;/post/improving-the-remediation-of-incidents/&#34;&gt;Improving the Remediation of Incidents&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Customizing Azure Boards for Incident Tracking</title>
+      <link>/post/customizing-azure-boards-for-incident-tracking/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/customizing-azure-boards-for-incident-tracking/</guid>
+      <description>&lt;p&gt;Now that we have 
+&lt;a href=&#34;/post/creating-an-incident-tracking-tool-with-azure-boards/&#34;&gt;a tool to track the incident details&lt;/a&gt;, we need to ensure we are tracking all of the important aspects. Such as &lt;em&gt;When did we know about the problem&lt;/em&gt; and more.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s now take a look at how we can customize Azure Boards to track additional incident details.&lt;/p&gt;
+&lt;h2 id=&#34;when-did-we-know&#34;&gt;When did we know?&lt;/h2&gt;
+&lt;p&gt;When a new record (or incident) is created in Azure Boards we will automatically have the date and time as well as a change log throughout the incident&amp;rsquo;s lifecycle&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;when-did-we-know.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;However, it would be good to have a separate field where we can also capture when our systems were detecting the issue. It is possible that while no alerts were triggered for humans to respond, the data was there if only we were monitoring and alerting on it.&lt;/p&gt;
+&lt;h2 id=&#34;how-did-we-know&#34;&gt;How did we know?&lt;/h2&gt;
+&lt;p&gt;The default fields do not provide anything suitable to capture this information. We will need to create a new field to start tracking it.&lt;/p&gt;
+&lt;h2 id=&#34;who-is-aware&#34;&gt;Who is aware?&lt;/h2&gt;
+&lt;p&gt;Using the &lt;strong&gt;Assigned To&lt;/strong&gt; field we can attempt to communicate some awareness. If the first responder updates the State (to &lt;strong&gt;Acknowledged&lt;/strong&gt;), and sets the &lt;strong&gt;Assigned To&lt;/strong&gt; field to themself, it acknowledges to others that someone has been alerted and is investigating.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;who-is-aware.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;what-is-the-impact&#34;&gt;What is the impact?&lt;/h2&gt;
+&lt;p&gt;When possible, it&amp;rsquo;s best to include context such as &amp;ldquo;customer impacting&amp;rdquo; in the alert itself. This allows immediate contextual awareness and a sense of urgency. We can create a new field to track the official severity level.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-being-done&#34;&gt;What is being done?&lt;/h2&gt;
+&lt;p&gt;Naturally, anyone looking at the details of the incident are going to want to know what is being done. The &lt;strong&gt;description&lt;/strong&gt; and &lt;strong&gt;discussion&lt;/strong&gt; fields provide great places for responders or others assisting in the efforts to update the larger audience on what is being done and what expectations to have regarding future updates.&lt;/p&gt;
+&lt;p&gt;However, real-time updates on what is taking place can be found within the chat channel where engineers are collaborating during the response.&lt;/p&gt;
+&lt;p&gt;It would be useful to provide a link or information for others to follow if they would like to observe the conversation as it unfolds. We will need to create a field specifically related to the conversation.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s now customize Azure Boards to satisfy our basic needs of tracking an incident.&lt;/p&gt;
+&lt;h2 id=&#34;creating-new-fields&#34;&gt;Creating New Fields&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Click the &amp;ldquo;&lt;strong&gt;Customize&lt;/strong&gt;&amp;rdquo; option under the &lt;strong&gt;(&amp;hellip;)&lt;/strong&gt; in the upper right.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;customize-fields.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Before we create new fields, let&amp;rsquo;s first make changes to the &lt;strong&gt;&amp;ldquo;State&amp;rdquo;&lt;/strong&gt; of incidents to better align with industry terminology.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Click on &lt;strong&gt;+ New State&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Delete the existing ones and create new states that better align with terminology used. Such as &lt;strong&gt;Acknowledged&lt;/strong&gt; (ACK), &lt;strong&gt;Escalated&lt;/strong&gt;, etc.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;new-incident-states.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Click on &lt;strong&gt;Layout&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Then add new fields using the button below&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;new-fields.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Confirm changes&lt;/p&gt;
+&lt;p&gt;When you return to the incident, you&amp;rsquo;ll notice a warning message pointing out that the current state of &amp;ldquo;To do&amp;rdquo; does not match the existing options.&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;ll also see the new fields that we have added (Time to detection, source of alert, etc.)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;updated-incident.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This should be a good place to start capturing information that will be helpful and important to analyze in a post-incident review later.&lt;/p&gt;
+&lt;p&gt;With the information tracked in Azure Boards along with the conversations taking place in Microsoft Teams we will have a lot of great data to analyze.&lt;/p&gt;
+&lt;p&gt;From that analysis we will measure and establish baselines and expectations around incident response.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s important to discuss 
+&lt;a href=&#34;/post/measuring-incident-response/&#34;&gt;measuring incident response&lt;/a&gt; now. However, on our path to continuous improvement there are certain traps we want to avoid when examining incidents, especially in aggregate.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creating an Incident Tracking Tool with Azure Boards</title>
+      <link>/post/creating-an-incident-tracking-tool-with-azure-boards/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/creating-an-incident-tracking-tool-with-azure-boards/</guid>
+      <description>&lt;p&gt;Tracking incidents is as easy as setting up a datastore, like the table storage used for the on-call roster. However, why reinvent the wheel? Why not use something already available, customizable, extensible, and free?&lt;/p&gt;
+&lt;p&gt;Azure Boards is my tool of choice in this tutorial, but honestly this could probably be done with any popular project management tool with an API.&lt;/p&gt;
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    First, login or create a &lt;a href=&#34;https://azure.microsoft.com/?wt.mc_id=oncalllife-blog-jahand&#34;&gt;free Azure &lt;strong&gt;Devops&lt;/strong&gt; account&lt;/a&gt;.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Select an existing or create a new project in &lt;strong&gt;Azure Devops&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Click on &lt;strong&gt;Work Items&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In the left navigation menu, choose &lt;strong&gt;Work Items&lt;/strong&gt; under the Boards group. This is what we will use to track our incidents.&lt;/p&gt;
+&lt;p&gt;But before we do, we need to create a custom work item type and then start a new project based on different default options.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;work-items-boards.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Navigate to the &lt;strong&gt;Project Configuration&lt;/strong&gt; settings&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Project Settings&lt;/strong&gt; icon is in the lower left. Then select &lt;strong&gt;Project Configuration&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;From here we will create a custom work item type for incidents.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;project-settings.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Click the &amp;ldquo;&lt;strong&gt;go to the process customization page&lt;/strong&gt;&amp;rdquo; link in the upper right&lt;/p&gt;
+&lt;p&gt;This is where we can view existing &lt;strong&gt;Work Item Types&lt;/strong&gt; as well as create new ones. But first, we have to create a new inherited process in order to enable customizations.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;custom-work-item-types.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; Click on the &amp;ldquo;&lt;strong&gt;create an inherited process&lt;/strong&gt;&amp;rdquo; link near the top&lt;/p&gt;
+&lt;p&gt;Give it a name, such as &lt;code&gt;on-call&lt;/code&gt; and a description.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;create-inherited-process.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Once you click &amp;ldquo;&lt;strong&gt;Create process&lt;/strong&gt;&amp;rdquo; you&amp;rsquo;ll be returned to the previous screen where you can now select the &lt;strong&gt;+ New work item type&lt;/strong&gt; option.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;create-new-work-item-type.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Give it a name, like &lt;code&gt;Incident&lt;/code&gt;, a description, icon, and icon color. Then press create.&lt;/p&gt;
+&lt;p&gt;From the next screen click on &lt;strong&gt;Process&lt;/strong&gt; found in the &lt;strong&gt;Boards&lt;/strong&gt; section of the left navigation pane. You&amp;rsquo;ll see the new inherited process &amp;ldquo;on-call&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6.&lt;/strong&gt; Click the settings elipses &lt;strong&gt;(&amp;hellip;)&lt;/strong&gt; followed by &lt;strong&gt;+ New team project&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;7.&lt;/strong&gt; Click create &lt;strong&gt;new project&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;new-team-project-option.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Give the project a name, description, and a few other selections and press &lt;strong&gt;create&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;create-new-project.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;We will use this new project for all incident tracking leaving the original project for something else.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s check to see if our new work item type is available. Return to Azure Boards.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;8.&lt;/strong&gt; Click the &lt;strong&gt;+ New Work Item&lt;/strong&gt; option&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;ll now see an additional work item type of &amp;ldquo;&lt;strong&gt;incident&lt;/strong&gt;&amp;quot;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;see-new-work-item-type.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Select the Incident option to view the default fields available to track details.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;create-new-work-item.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;We can see that we have a number of fields available to us by default such as &lt;strong&gt;Assigned To&lt;/strong&gt;, &lt;strong&gt;State&lt;/strong&gt;, &lt;strong&gt;Discussion&lt;/strong&gt;, and more.&lt;/p&gt;
+&lt;p&gt;We now have a basic way of tracking incidents. Any time an incident is detected, we can add a new work item type of &amp;ldquo;incident&amp;rdquo; along with the important details so that there is a central place for everyone to stay informed.&lt;/p&gt;
+&lt;p&gt;However, the default settings only provide us a few important things that we want to track. We mentioned before that we&amp;rsquo;d like to track when, how, who, and what we know about the incident.&lt;/p&gt;
+&lt;p&gt;We can easily add and modify fields within Azure Boards to allow for tracking additional details we know are important to our incident response efforts.&lt;/p&gt;
+&lt;p&gt;Now, let&amp;rsquo;s talk about ways of 
+&lt;a href=&#34;/post/customizing-azure-boards-for-incident-tracking/&#34;&gt;Customizing Azure Boards for Incident Tracking&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Defining Incidents</title>
+      <link>/post/defining-incidents/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/defining-incidents/</guid>
+      <description>&lt;p&gt;If you search online for &amp;ldquo;Incident Response&amp;rdquo; a majority of what you&amp;rsquo;ll find is information related to security threats and breaches. What doesn&amp;rsquo;t show up in the results is stuff about how to properly respond to threats related to something else entirely.&lt;/p&gt;
+&lt;p&gt;How should a business respond to technical challenges and failures as they come up? The ones that affect reliability concerns such as availability, latency, correctness, and others. What happens when service level expectations are breached and it&amp;rsquo;s time for a human to get involved?&lt;/p&gt;
+&lt;p&gt;Services such as VictorOps, PagerDuty, and others provide &amp;ldquo;on-call&amp;rdquo; solutions as well as documentation and best practices regarding this type of incident management. Service Now has opinions as well but the language is aimed more for those who follow ITSM guidance regarding service management. Ticketing with a tiered support structure doesn&amp;rsquo;t provide the fasted path to uptime for many companies however.&lt;/p&gt;
+&lt;p&gt;In the devops and web operations space, the idea of anyone but the engineers building the system responding to customer impacting problems is completely unacceptable. Irresponsible even. Time is of the essence and those who helped build the applications and underlying infrastructure are the best suited to maintain it&amp;rsquo;s health and upgrades in a production environment.&lt;/p&gt;
+&lt;p&gt;Exactly when an engineer should be expected to take action is why we need to define what we mean by an incident.&lt;/p&gt;
+&lt;p&gt;We can all agree that an incident is a “&lt;strong&gt;service disruption&lt;/strong&gt;” - something that is affecting our user&amp;rsquo;s ability to use the services they have come to rely on.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s a given. However, there are other things about incidents that are often overlooked or never considered. For example incidents are commonly subjective, feared, and unexpected&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;from-microsofts-icm-documentation&#34;&gt;From Microsoft&amp;rsquo;s IcM Documentation&lt;/h2&gt;
+&lt;h3 id=&#34;what-is-an-incident&#34;&gt;What is an incident?&lt;/h3&gt;
+&lt;p&gt;An incident is any unplanned interruption or degradation of a product or service that is causing customer impact. For example, a bad HTTP request, slow connection, security vulnerability, or customer-reported error message could constitute an incident. Every service across Microsoft has a different definition of what an incident is and when one should be triggered.&lt;/p&gt;
+&lt;p&gt;Sometimes, an incident can be severe enough to affect many different services and customers. For example, a datacenter power failure may impact dozens of Microsoft products. Severe incidents with broad impact are called outages.&lt;/p&gt;
+&lt;p&gt;Typically any customer impacting incident must be mitigated as soon as possible to minimize the customer impact. Organizations track Time-To-Mitigate (TTM) metrics for their services. For example: In Azure, TTM must be &amp;lt;= 30mins for any customer impacting incident.&lt;/p&gt;
+&lt;h3 id=&#34;what-is-incident-management&#34;&gt;What is incident management?&lt;/h3&gt;
+&lt;p&gt;Incident Management is the process of detecting a live-site problem with a service, creating an incident, determining the cause, restoring the service to full operation, and capturing learnings to prevent it from happening again.&lt;/p&gt;
+&lt;h3 id=&#34;what-is-icm&#34;&gt;What is IcM?&lt;/h3&gt;
+&lt;p&gt;IcM is the one incident management system for all Microsoft services. IcM provides tools for managing live site and on call rotations. IcM runs around the clock to keep services working across the world. Incident Types supported are &amp;ldquo;Livesite Incident&amp;rdquo;, &amp;ldquo;Deployment Incident&amp;rdquo; and &amp;ldquo;Customer Reported Incidents&amp;rdquo;. No additional types will be supported.&lt;/p&gt;
+&lt;h3 id=&#34;what-icm-is-not&#34;&gt;What IcM is not?&lt;/h3&gt;
+&lt;p&gt;IcM is not intended to be a ticketing solution. IcM was designed for incidents that must be mitigated within minutes to minimize the customer impact. Here are some differences:&lt;/p&gt;
+&lt;p&gt;In a ticketing solution, a ticket can take &amp;lsquo;n&amp;rsquo; days to resolve. In IcM, incidents need to be resolved as soon as possible to minimize customer impact.&lt;/p&gt;
+&lt;p&gt;In a ticketing solution, teams might want to pause or have a count down timer for tickets. In IcM, this will not be supported because the incident has to be resolved in minutes.
+In a ticketing solution, teams might want to customize the workflows. In IcM, incident workflow is fixed: Create -&amp;gt; Acknowledge -&amp;gt; Mitigate -&amp;gt; Resolve.&lt;/p&gt;
+&lt;p&gt;In a ticketing solution, teams might want different &amp;lsquo;Types&amp;rsquo; and &amp;lsquo;Sub-Types&amp;rsquo;. In IcM, only types that will be supported are &amp;ldquo;Livesite Incident&amp;rdquo;, &amp;ldquo;Deployment Incident&amp;rdquo; and &amp;ldquo;Customer Reported Incidents&amp;rdquo;. This is to ensure that Service teams are focused on addressing the customer impacting incidents as soon as possible.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/exploring-subjectivity-of-incidents/&#34;&gt;Exploring Subjectivity of Incidents&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Defining Site Reliability Engineering</title>
+      <link>/post/defining-site-reliability-engineering/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/defining-site-reliability-engineering/</guid>
+      <description>&lt;p&gt;Site Reliability Engineering is an engineering discipline devoted to helping
+organizations sustainably achieve the appropriate level of reliability in their
+systems, services, and products.&lt;/p&gt;
+&lt;p&gt;The key concepts to take away from this definition are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Reliability.&lt;/strong&gt; You learned in the introductory module that there are
+multiple aspects to reliability and later in this module, you’ll examine
+each in more detail. You also learned about the importance of reliability –
+why it matters.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Sustainability.&lt;/strong&gt; In this context, “sustainable” refers to the role of
+people in creating a sustainable operations practice. Reliable systems,
+services, products are built by people. It is crucial to the concept of SRE
+to implement an operations practice that is sustainable over time, so that
+people are able to bring their best to the job.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Appropriateness.&lt;/strong&gt; It’s important to understand that 100% reliability
+isn’t often possible, especially in today’s complex systems with
+dependencies on other systems. 100% reliability means zero down time, which
+also means no opportunity to make any changes or improvements that could
+create some down time. Instead of striving for a goal of absolute
+reliability, determine the appropriate level of reliability for a particular
+application or service.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The role of a site reliability engineer bridges the span between operations and
+development but also goes beyond DevOps, and the SRE philosophy is the basis of
+a new and more efficient and effective approach to building and operating
+reliable systems and applications.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Defining the Post-incident Review</title>
+      <link>/post/defining-the-post-incident-review/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/defining-the-post-incident-review/</guid>
+      <description>&lt;p&gt;To conduct a good post-incident review, you must first ensure that everyone is
+on the same page. Toward that end, remember that language matters; there are
+terms you should use and some you shouldn’t. Key points in conducting the review
+are who to include (everyone) and when to do it (within twenty-four to
+thirty-six hours). This will help you accomplish the purpose of the review: to
+learn and improve.&lt;/p&gt;
+&lt;p&gt;We learn from incidents by conducting a post-incident review, which happens
+during the analysis phase. You should do a post-incident review after every
+significant incident.&lt;/p&gt;
+&lt;p&gt;(Placeholder: graphic of incident response lifecycle in Slide #28)&lt;/p&gt;
+&lt;p&gt;Although the formal review takes place after the response and remediation
+phases, you begin to set the stage for your analysis as soon as you receive an
+actionable alert that an incident has occurred, inform team members, and begin a
+conversation around the incident.&lt;/p&gt;
+&lt;h2 id=&#34;language-matters&#34;&gt;Language matters&lt;/h2&gt;
+&lt;p&gt;In conducting that conversation, and as you go through this unit, there is an
+important point that you need to keep in mind: &lt;em&gt;language matters.&lt;/em&gt; There are
+specific terms that you should use and others that you should deliberately avoid
+using. That’s because the words you use affect how you think about what happened
+and can dramatically impact what and how much you learn from the incident.&lt;/p&gt;
+&lt;p&gt;This has been shown by research in safety-critical industries such as aviation,
+medicine, search and rescue, firefighting, and more. This field of research is
+known as resilience engineering.&lt;/p&gt;
+&lt;p&gt;Resilience engineering principles are applicable to the technology sector, as
+well. In this module, you’ll learn some of the useful concepts from resilience
+engineering, including four of the most common traps people fall into when
+attempting to learn from failure.&lt;/p&gt;
+&lt;h2 id=&#34;defining-the-post-incident-review&#34;&gt;Defining the post-incident review&lt;/h2&gt;
+&lt;p&gt;Not everyone uses exactly the same language to refer to the results of the
+analysis phase. You might call it:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Post-incident review&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Post-incident learning review&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Postmortem&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Retrospective&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In addition, not everyone goes about it in exactly the same way. For example,
+many people start by getting everyone who had any connection to the incident
+into a room, while other people choose to create the review via individual
+interviews and then report back to the group.&lt;/p&gt;
+&lt;p&gt;The latter method often works better when group settings in your organization
+are more difficult because of group dynamics or personalities or may be based on
+how distributed the group member are, or the type of incident. You should do
+what works best for your team and the circumstances.&lt;/p&gt;
+&lt;p&gt;Whatever you call it and however you organize it, there are a couple of key
+points:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Inclusiveness:&lt;/strong&gt; You should try to include in the post-incident review
+&lt;em&gt;everyone who was involved&lt;/em&gt; in the incident response.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Timing&lt;/strong&gt;: you should perform the post-incident review &lt;em&gt;within twenty-four
+to thirty-six hours&lt;/em&gt; after the event if at all possible. Neuroscience has
+confirmed that human memory is notoriously unreliable; people forget things.
+The more time that passes after an event, the less detailed and specific
+memories tend to be.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;purpose-of-the-post-incident-review&#34;&gt;Purpose of the post-incident review&lt;/h2&gt;
+&lt;p&gt;The goal of the post-incident review is so your team can learn and improve. You
+will want to learn about the systems and about the things that you had put in
+place that worked or didn’t work, so you can make improvements.&lt;/p&gt;
+&lt;p&gt;At the same time, you should remember that action items that you generate –
+reports, tasks, feedback – are useful but are peripheral to the point of the
+process, which is to learn and improve. Action items are a secondary effect.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/breaking-down-the-components-of-a-post-incident-review/&#34;&gt;Breaking Down the Components of a Post-incident Review&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Examining Common Traps</title>
+      <link>/post/examining-common-traps/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/examining-common-traps/</guid>
+      <description>&lt;p&gt;As we delve into our post-incident review, we need to be on guard against some
+human tendencies that can lead us to inaccurate or incomplete conclusions and
+distract us from accomplishing the core purpose of the review: learning about
+our systems so as to improve their reliability.&lt;/p&gt;
+&lt;p&gt;Now you have a roadmap help you get started on the post-incident review process,
+but it would also be useful to know about some of the obstacles you might
+encounter on this journey.&lt;/p&gt;
+&lt;p&gt;Learning from your own mistakes is something everyone should all do, but you
+don’t always have to experience something first-hand to learn from it. Learning
+from the mistakes of others, without criticizing or judging them, allows you to
+benefit from those lessons without personally suffering the consequences.&lt;/p&gt;
+&lt;p&gt;In this unit, you’ll find out about some common traps that others have fallen
+into during the post-incident review process and how to avoid them.&lt;/p&gt;
+&lt;h2 id=&#34;trap-1-attribution-to-human-error&#34;&gt;Trap 1: Attribution to “human error”&lt;/h2&gt;
+&lt;h2 id=&#34;trap-2-counterfactual-reasoning&#34;&gt;Trap 2: Counterfactual reasoning&lt;/h2&gt;
+&lt;h2 id=&#34;trap-3-normative-language&#34;&gt;Trap 3: Normative language&lt;/h2&gt;
+&lt;h2 id=&#34;trap-4-mechanistic-reasoning&#34;&gt;Trap 4: Mechanistic reasoning&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/examining-attribution-of-human-error/&#34;&gt;Examining Attribution of Human Error&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Examining Counter-factual Reasoning</title>
+      <link>/post/examining-counter-factual-reasoning/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/examining-counter-factual-reasoning/</guid>
+      <description>&lt;p&gt;In the field of psychology, counterfactual thinking is a concept that’s
+associated with the human tendency to invent possible alternatives to past
+events – how things might have turned out differently.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Counterfactual&lt;/em&gt; means “contrary to facts,” and &lt;em&gt;counterfactual reasoning&lt;/em&gt;
+refers to telling a story about events that did not happen, in order to explain
+the events that did. You can identify counterfactual statements by key phrases:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Could have&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Should have&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Would have&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Failed to&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Did not&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If only&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some examples of counterfactual statements related to post-incident reviews:&lt;/p&gt;
+&lt;p&gt;“The monitoring system failed to detect the problem.”&lt;/p&gt;
+&lt;p&gt;“The engineer did not check the validity of the configuration before enacting
+it.”&lt;/p&gt;
+&lt;p&gt;“This could have been picked up in the canary environment.”&lt;/p&gt;
+&lt;p&gt;The problem with this type of reasoning is that you’re talking about things that
+didn’t happen instead of taking the time to understand how what did happen,
+happened. You don’t learn anything from this speculation.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/examining-mechanistic-reasoning/&#34;&gt;Examining Mechanistic Reasoning&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Examining Mechanistic Reasoning</title>
+      <link>/post/examining-mechanistic-reasoning/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/examining-mechanistic-reasoning/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Mechanistic reasoning&lt;/em&gt; refers to the concept that a particular outcome can be
+inferred from intervention. It’s sometimes called the &lt;em&gt;meddling kids syndrome&lt;/em&gt;
+based on the premise that “Our system would have worked fine … if it hadn’t been
+for those meddling kids.”&lt;/p&gt;
+&lt;p&gt;When you use mechanistic reasoning in your post-incident review, you build your
+conclusions on the fallacy that the systems you work with and within are
+basically working correctly, and if only those “meddling kids” hadn’t done
+whatever they did, the failure would not have occurred.&lt;/p&gt;
+&lt;p&gt;However, that’s not how systems work.&lt;/p&gt;
+&lt;p&gt;To illustrate this point, imagine the following scenario: You work on a
+production service. Now you’re told that you are not allowed to touch or do
+anything to that service. Everything outside your team continues as before –
+customers continue to use the service, external dependencies continue to change,
+the Internet functions normally.&lt;/p&gt;
+&lt;p&gt;But you can’t make any changes to the code or configuration. No deployments, no
+control plane operations, nothing.&lt;/p&gt;
+&lt;p&gt;Do you think your service would still be running as expected after a day? After
+a week? After a month? After a year? How long could you realistically expect
+your service to keep running without human intervention?&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Human adaptive capacity is necessary to keep our systems up and running&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The only reason your systems are up and running in the first place is because of
+the actions of humans in the control loop. It’s only through human action
+and ability to adapt to changing circumstances that the system continues to
+work.&lt;/p&gt;
+&lt;p&gt;Therefore, it’s erroneous to conclude the system was “basically working…
+if it hadn’t been for those meddling kids.” In fact, the reliability of your
+service is not independent of the humans who work on it. Instead, it’s a direct
+result of the work that the humans do on it every day.&lt;/p&gt;
+&lt;p&gt;The problem with mechanistic reasoning is that it leads you down a path where
+you believe that finding the faulty human is equivalent to finding the problem.
+However, that same faulty human has been improvising and adapting to keep the
+system running for weeks and months.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/examining-normative-language/&#34;&gt;Examining Normative Language&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Examining Normative Language</title>
+      <link>/post/examining-normative-language/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/examining-normative-language/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Normativity&lt;/em&gt; relates to the human tendency to designate some actions and
+outcomes as desirable or good and other actions or outcomes as undesirable or
+bad. A norm is a standard of correctness agreed upon by a society.&lt;/p&gt;
+&lt;p&gt;When you use normative language in a post-incident review, you judge the
+decisions and actions of those responding to the incident with the benefit of
+&lt;em&gt;hindsight&lt;/em&gt;. This language implies that there was an obviously correct course of
+action that the operator should have followed.&lt;/p&gt;
+&lt;p&gt;Normative language can usually be identified by adverbs such as “inadequately,”
+“carelessly,” “hastily,” and so forth.&lt;/p&gt;
+&lt;p&gt;Normative thinking leads you to judge decisions based on their outcomes. This
+isn’t logical because the outcome is the &lt;em&gt;only piece of information that was not
+available&lt;/em&gt; to those who made the decisions and judgments.&lt;/p&gt;
+&lt;p&gt;The problem with normative thinking is that you neglect to understand how the
+actions of the operators made sense to them at the time.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/&#34;&gt;Home&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Examining the Attribution of Human Error</title>
+      <link>/post/examining-attribution-of-human-error/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/examining-attribution-of-human-error/</guid>
+      <description>&lt;p&gt;Humans make mistakes. However, &lt;em&gt;human error&lt;/em&gt; is not a diagnosis; it’s a symptom.
+When human error is deemed to be the reason for a failure, you may stop there
+instead of further analyzing the incident to determine the &lt;em&gt;root cause –&lt;/em&gt; which
+is a deeper, systemic issue.&lt;/p&gt;
+&lt;p&gt;System design, organizational context, and personal context all affect when, how
+and with what impact people make mistakes. &lt;em&gt;“&lt;em&gt;Human error&lt;/em&gt;”&lt;/em&gt; is a label that
+causes you to quit investigating at precisely the moment when you’re about to
+discover something interesting about your system.&lt;/p&gt;
+&lt;p&gt;The problem with the “human error” conclusion in investigations is that it
+causes you to lose sight of the fact that what the humans did made sense to them
+at the time. Mistakes, by definition, aren’t deliberate, so they didn’t intend
+to make a mistake.&lt;/p&gt;
+&lt;p&gt;When we see or hear “human error”, it is a signal that we need to look deeper.
+Root cause analysis is needed to identify the sequence of events that resulted
+in the human error.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/examining-counter-factual-reasoning/&#34;&gt;Examining Counter-factural Reasoning&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring Fear of Incidents</title>
+      <link>/post/exploring-fear-of-incidents/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-fear-of-incidents/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;There is also a subtler effect, which is that the fear of on-call is often enough by itself to radically change people’s behavior. Entire development teams reject outright the notion of going on call, because of the impact on their personal lives, family, and in-hours effectiveness.&amp;rdquo; - Niall Murphy, Microsoft &amp;ldquo;Seeking SRE&amp;rdquo;(O&amp;rsquo;Reilly)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In some cases, we downplay the significance of an outage &amp;hellip; or worse &amp;hellip; intentionally mis-label or not report a disruption in service for fear of reprimand.&lt;/p&gt;
+&lt;p&gt;Historically, we have felt that incidents reflected poorly in several areas of our engineering efforts and the organization.&lt;/p&gt;
+&lt;p&gt;It has not been until more recently through many of the conversations around devops and site reliability engineering, that we are starting to rethink incidents and now view them as opportunities to learn and improve our systems.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/exploring-why-incidents-are-unexpected/&#34;&gt;Exploring Why Incidents Are Unexpected&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring Subjectivity of Incidents</title>
+      <link>/post/exploring-subjectivity-of-incidents/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-subjectivity-of-incidents/</guid>
+      <description>&lt;p&gt;If you ask engineers across different organizations and industries, you will get many different answers about what an incident is.&lt;/p&gt;
+&lt;p&gt;Sometimes it is only when a customer is affected.&lt;/p&gt;
+&lt;p&gt;Others will label disruptions as incidents even if a customer never experienced a thing.&lt;/p&gt;
+&lt;p&gt;Subjectivity is an unfortunate property of incidents in a lot of cases, even when it comes to identifying severity levels.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/exploring-fear-of-incidents/&#34;&gt;Exploring Fear of Incidents&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring Why Incidents are Unexpected</title>
+      <link>/post/exploring-why-incidents-are-unexpected/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-why-incidents-are-unexpected/</guid>
+      <description>&lt;p&gt;In other words &amp;hellip; unplanned Work&lt;/p&gt;
+&lt;p&gt;Most of what we as engineers and technologists do is planned work.&lt;/p&gt;
+&lt;p&gt;We spend a lot of time and effort understanding the work in front of us.&lt;/p&gt;
+&lt;p&gt;We calculate story points.  We plan sprints. We have a pretty good idea on what we are supposed to be working on.&lt;/p&gt;
+&lt;p&gt;So, when an incident occurs, it is disruptive. It is&amp;hellip; unplanned work.&lt;/p&gt;
+&lt;p&gt;Often, we view this as a terrible thing, but in reality, incidents are actually “investments” in supplying the value we are trying to deliver to end users.&lt;/p&gt;
+&lt;p&gt;We just need to change how we look at incidents.&lt;/p&gt;
+&lt;p&gt;Next we&amp;rsquo;ll discuss the full lifecycle of an incident. From detection to analysis and everything in between. When we start to view incidents through a new lense and begin analyzing for opportunities to learn, you&amp;rsquo;ll begin to see your systems for what they are and why having a response plan in place makes sense.&lt;/p&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/understanding-the-full-lifecycle-of-an-incident&#34;&gt;Understanding the Full Lifecycle of An Incident&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Gathering Data For the Post-incident Review</title>
+      <link>/post/gathering-data-for-the-post-incident-review/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/gathering-data-for-the-post-incident-review/</guid>
+      <description>&lt;p&gt;The post-incident review process begins with the data. That includes the data in
+the conversations related to the incident as well as the data collected by
+monitoring systems. You can use Azure tools to collect, find, correlate, and
+share the data in the course of conducting your learning review.&lt;/p&gt;
+&lt;p&gt;In this unit, you’ll learn how to go about the construction of a shared,
+accurate chronology that reflects the non-linear nature of an incident.
+&lt;em&gt;Non-linear&lt;/em&gt; refers to the fact that incidents are almost never just a matter of
+“this happened, and then that happened, then we noticed, then we did something,
+and then we were done.”&lt;/p&gt;
+&lt;p&gt;As an incident occurs, develops, and plays out, different people get involved.
+They notice and try different things, and some work, some don’t. If multiple
+people are working at the same time, all these things can be happening
+simultaneously. Thus, it’s a bit more complicated than just a straight-line
+description.&lt;/p&gt;
+&lt;p&gt;To create a logical timeline, then, you need a starting point and the place to
+start is with the relevant data.&lt;/p&gt;
+&lt;h2 id=&#34;gather-the-data&#34;&gt;Gather the data&lt;/h2&gt;
+&lt;p&gt;Before you can conduct a learning review, you first need to gather data.
+Specifically, you need to collect as much of the conversation surrounding the
+event as you can so you can use all of the crucial data contained in it. The
+conversation among team members that happened during the outage or incident will
+be one of your richest sources of information.&lt;/p&gt;
+&lt;p&gt;You also should gather from your monitoring system and other places from which
+the people involved in the incident drew context. What information were they
+getting from your systems when the incident was going on?&lt;/p&gt;
+&lt;p&gt;And finally, if possible, it would be helpful for you to get a better picture of
+what changed just prior to and during the incident because changes are often
+contributing factors when an incident occurs.&lt;/p&gt;
+&lt;p&gt;The data-gathering step has three parts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Collect the conversation.&lt;/strong&gt; It’s important to have a place for people to
+communicate and share what worked and what failed, what they’re hesitant to
+try, what they’ve tried in the past. This conversation between the people as
+they work through and solve the issue is your best source of learning.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Determine the context.&lt;/strong&gt; This is done primarily through monitoring. It
+involves building a point in time to collect the data you have and correlate
+it to the event now that you’re looking back at it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Find the changes.&lt;/strong&gt; You do this through activity and audits logs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;data-collection-tools&#34;&gt;Data collection tools&lt;/h2&gt;
+&lt;p&gt;There are tools that you can use to make these steps easier. Using Azure for
+these systems can help make you better able to gather all this data quickly.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Azure DevOps&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You have data already captured in the Azure DevOps Boards that includes tracking
+of incidents with information about who was on call, who was assigned to the
+incident, and so forth. You can also use the Azure DevOps Wiki as a centralized
+way to pull in some of the pieces of information about both the incident itself
+and the conversation that happened during the incident.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Graph Explorer&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You can also use queries in Graph Explorer to programmatically find, export and
+bring in the conversation that was collected inside the Teams channel that was
+devoted to this specific incident.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dashboards, Application Insights and JSON&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You can create a dashboard in the Azure portal to correlate what the operators
+were seeing to the incident itself. Application Insights give you graphs you can
+add to the dashboard to visualize the information. This allows you to see your
+tracked metrics side-by-side to better identify where and when the incident
+happened. You can pull down the dashboard and its components using JSON, and,
+for example, focus on a specific window of time and drill down to provide more
+context for your investigation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Log Analytics and Audit Log&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You can use information here to discover changes and find the delta between
+where you started and where you ended.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/reviewing-azures-monitoring-tools/&#34;&gt;Reviewing Azure Monitoring Tools&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Identifying the Incident Analysis Phase</title>
+      <link>/post/identifying-the-incident-analysis-phase/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/identifying-the-incident-analysis-phase/</guid>
+      <description>&lt;p&gt;The post-incident review is where the idea of incidents begin to shift from things that are feared and avoided to things that can provide valuable information to a team and business.&lt;/p&gt;
+&lt;p&gt;Rarely will you find a business today that doesn&amp;rsquo;t heavily rely on digital services to earn and keep customers. There are going to be problems along the way. Not only that, but customers expect improvements, technology changes, competitors get smarter. There are fewer and fewer industries that can maintain the status quo and continue to exist, let alone prosper.&lt;/p&gt;
+&lt;p&gt;The analysis phase allows for an honest and open retrospective discussion about what took place. We as an organization want to understand the realities of the scenario from an objective perspective.&lt;/p&gt;
+&lt;p&gt;Exactly how you conduct the exercises will vary but the focus of the conversation is on what and how things happened rather than who and why.&lt;/p&gt;
+&lt;p&gt;By identifying the incident timeline as well as the specific highlights, people can identify the beginning and end of each phase, including the conversations that took place.&lt;/p&gt;
+&lt;p&gt;This helps isolate specific areas of improvements such as moving away from using email distribution lists as the default channel and method of delivering actionable alerts. In discussions about the detection phase, it seemed clear to everyone that the problem could have been solved sooner had they known about it sooner. Sometimes even small changes can have a huge impact on improving the overall time to recover.&lt;/p&gt;
+&lt;p&gt;Regardless of how businesses choose to perform their post-incident review, they should take place no more than 36-48 hours after the incident has concluded.&lt;/p&gt;
+&lt;p&gt;We are looking to collect as much objective data as well as testimonial from a diverse set of perspectives. It&amp;rsquo;s difficult to remember what took place in much detail after a couple of days.&lt;/p&gt;
+&lt;p&gt;If possible, the exercise should be facilitated by someone that was not involved in the incident. Someone who can remove themselves from the timeline of events and perspectives of what took place. Objective data is often easier to obtain when someone else asks the questions and encourages an honest conversation.&lt;/p&gt;
+&lt;p&gt;The point of a post-incident review isn&amp;rsquo;t to end up with a document or artifact that the meeting took place. It&amp;rsquo;s not an exploration on what definitively caused the issue in the first place.&lt;/p&gt;
+&lt;p&gt;Our systems are always changing. That&amp;rsquo;s just where we are today. Businesses that are providing some kind of service to their customers where technology is involved are required to make constant changes. It doesn&amp;rsquo;t matter if it&amp;rsquo;s in the cloud, data center, or closet, servers need improvements and replacements. Operating systems need patches and upgrades. Applications need to be updated and restarted. Databases and logs are changing and growing. Networks are coming and going. There&amp;rsquo;s a lot going on and it&amp;rsquo;s often difficult to put our thumb on exactly what&amp;rsquo;s causing what.&lt;/p&gt;
+&lt;p&gt;The good news is, it&amp;rsquo;s ok.&lt;/p&gt;
+&lt;p&gt;Part of the advantage of examining incidents in phases means that regardless to the problems we experience in the future, we know that we can detect a problem, get the right people involved, and recover services faster than before. We are prepared for the infinite world of possibilities we like to call the &amp;ldquo;unknown unknowns&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;This takes us to our final phase of the incident lifecycle, readiness.&lt;/p&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/identifying-the-incident-readiness-phase&#34;&gt;Identifying the Readiness Phase of an Incident&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Measuring Incident Response</title>
+      <link>/post/measuring-incident-response/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/measuring-incident-response/</guid>
+      <description>&lt;p&gt;Are you familiar with the acronym &lt;strong&gt;TTR&lt;/strong&gt;?&lt;/p&gt;
+&lt;p&gt;It is known as the &lt;strong&gt;“Time to Recover”&lt;/strong&gt; or often referred to as the “time to remediate” or “time to restore.”&lt;/p&gt;
+&lt;p&gt;In other words, the total time that it takes for engineers to bring services back online… with regards to the value provided to end users and customers. It is the total duration of time for the incident?&lt;/p&gt;
+&lt;p&gt;The time to recover will vary from incident to incident and the circumstances around what contributed to the problem will rarely repeat. Because of this, measuring the TTR in aggregate can be a misleading metric.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Mean Time to Recover&lt;/strong&gt; does not reflect a valuable performance metric on either the uptime of your systems or how well (or poorly) teams can respond to and remediate service disruptions.&lt;/p&gt;
+&lt;p&gt;While not a perfect metric, it is one in which organizations can begin to measure how teams are performing when it comes to responding to incidents individually. We will need to examine the entire incident timeline to gain a broader understanding of what took place and where improvements can be made.&lt;/p&gt;
+&lt;p&gt;Most anyone who works with technology will agree that the complete prevention of problems is not very realistic.&lt;/p&gt;
+&lt;p&gt;Instead, we must do better at knowing when something is wrong and being able to respond to it in an effective way.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s now look at how 
+&lt;a href=&#34;/post/creating-custom-incident-reports-and-charts-in-azure-boards/&#34;&gt;Creating Custom Incident Reports and Charts in Azure Boards&lt;/a&gt; will allow us to keep a pulse on how our incident management response is going.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Measuring Reliability From the Customer&#39;s Perspective</title>
+      <link>/post/measuring-reliability-from-the-customers-perspective/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/measuring-reliability-from-the-customers-perspective/</guid>
+      <description>&lt;p&gt;These eight components cover a big part of reliability. Not all of the factors will apply in every situation.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;reliability-customer-perspective.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When considering these factors, the most important point to remember is (again) that reliability has to be measured from the customer’s perspective, not the component perspective. Knowing our CPU&amp;rsquo;s running at over 90% utilization has no correlation to what our users are experiencing, let alone doing.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/understanding-measurements-of-reliability/&#34;&gt;Understanding Measurements of Reliability&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tracking How We Knew About a Problem</title>
+      <link>/post/tracking-how-we-knew-about-a-problem/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/tracking-how-we-knew-about-a-problem/</guid>
+      <description>&lt;p&gt;Did our monitoring systems tell us, or did a customer inform us?&lt;/p&gt;
+&lt;p&gt;Capturing whether problems were detected through telemetry or another method, means we can easily identify gaps in our monitoring tools and practices.&lt;/p&gt;
+&lt;p&gt;It also helps early responders to know where the problem is and what is affected. By communicating to the engineer where the problem was first detected, we provide valuable context in their early triaging efforts.&lt;/p&gt;
+&lt;p&gt;Incidents are often chaotic and stressful. It&amp;rsquo;s important to stay informed, especially awareness of a problem. Let&amp;rsquo;s talk now about 
+&lt;a href=&#34;/post/tracking-who-knows-about-a-problem/&#34;&gt;Tracking &lt;strong&gt;Who&lt;/strong&gt; Knows About a Problem&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tracking Impact of a Problem</title>
+      <link>/post/tracking-impact-of-a-problem/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/tracking-impact-of-a-problem/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;How Bad is It?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We may not have any notion of severity or impact and there is no place for us to find out how bad the problem really is, and who is affected. These are tough questions to answer if nothing is tracked.&lt;/p&gt;
+&lt;p&gt;There are many people who care about how things are going during an incident. We call them stakeholders. From CEO&amp;rsquo;s to sales teams, many more people outside of the engineering team want, need, and deserve to know &amp;ldquo;How bad is it?&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Regardless to if a severity level is assigned, it&amp;rsquo;s important to capture what impact the customer is experiencing. What additional failures might we expect? Being transparent around what is known to be impacted from what is known about the problem allows and empowers others to take action to mitigate or minimize downstream affects.&lt;/p&gt;
+&lt;p&gt;There are great tools out there for tracking the details of incidents. Pagerduty, VictorOps and others have services specifically designed for this.&lt;/p&gt;
+&lt;p&gt;Under the surface, they are similar to ticketing systems or project tracking tools such as Jira and Azure Boards.&lt;/p&gt;
+&lt;p&gt;Next, I&amp;rsquo;ll show you how 
+&lt;a href=&#34;/post/creating-an-incident-tracking-tool-with-azure-boards/&#34;&gt;Creating an incident tracking tool with Azure Boards&lt;/a&gt; can be done in just a few steps for &lt;strong&gt;free&lt;/strong&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tracking Incident Details</title>
+      <link>/post/tracking-incident-details/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/tracking-incident-details/</guid>
+      <description>&lt;p&gt;To recover from incidents effectively, it&amp;rsquo;s important to communicate and collaborate effectively. In order to share relevant details of what is known about an incident, who is addressing it, and more, it&amp;rsquo;s important to have a method of tracking incident details.&lt;/p&gt;
+&lt;p&gt;Basic details such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When did know about the problem?&lt;/li&gt;
+&lt;li&gt;How did we find out about the problem?&lt;/li&gt;
+&lt;li&gt;Who is awareness of the problem?&lt;/li&gt;
+&lt;li&gt;What is being done?&lt;/li&gt;
+&lt;li&gt;How Bad is It?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Centralizing information about an incident allows others to stay on top of what is happening and maybe even offer additional support. It helps teams track the time of each phase, and it&amp;rsquo;s much easier to get a sense of how severe a problem is. What urgency, support, or resources are required? Teams can work much more effectively if they are looking at the same information.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s begin by 
+&lt;a href=&#34;/post/tracking-when-we-knew-about-a-problem/&#34;&gt;Tracking &lt;strong&gt;When&lt;/strong&gt; We Knew About a Problem&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tracking What Is Being Done About a Problem</title>
+      <link>/post/tracking-what-is-being-done-about-a-problem/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/tracking-what-is-being-done-about-a-problem/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;What (&lt;em&gt;if anything&lt;/em&gt;) is being done?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Is everyone assuming someone else is looking into it?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;These types of questions emerge as additional people join to assist.&lt;/p&gt;
+&lt;p&gt;When alerts are sent to distribution lists or general chat rooms it&amp;rsquo;s easy for them to be lost or at best delayed of action.&lt;/p&gt;
+&lt;p&gt;As first responders begin to assess the problem, conversations take place in persistent group chat tools such as Microsoft Teams or Slack.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s in these conversations where the most up to date and accurate information will exist about what is taking place during an active incident.&lt;/p&gt;
+&lt;p&gt;Responders will share information as it becomes available including who and what is being done. By scrolling back through the conversation, others can quickly get an update not only on what is being done in the moment, but what has already taken place.&lt;/p&gt;
+&lt;p&gt;This saves engineers from duplicating effort, including pausing their effort to recover from the problem in order to update a ticket or send an email.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ll talk more about a technique of managing tasks from withing chat known as chatops.&lt;/p&gt;
+&lt;p&gt;Severity and impact of incidents will vary but it&amp;rsquo;s important teams are 
+&lt;a href=&#34;/post/tracking-impact-of-a-problem/&#34;&gt;Tracking Impact of a Problem&lt;/a&gt; in order to spot trends as well as share details to stakeholders as services are restored.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tracking When We Knew About A Problem</title>
+      <link>/post/tracking-when-we-knew-about-a-problem/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/tracking-when-we-knew-about-a-problem/</guid>
+      <description>&lt;p&gt;Is this a new incident?&lt;/p&gt;
+&lt;p&gt;If we are trying to reduce the time it takes to recover from incidents, we will need to start capturing when we are aware of issues.&lt;/p&gt;
+&lt;p&gt;By examining incidents in phases, we can look for improvements in specific areas such as Detection. If we start capturing when we knew about a problem, patterns will emerge over time on what could be done to know sooner.&lt;/p&gt;
+&lt;p&gt;Kowing the Time to Detection (TTD) allows us to establish the beginning of our awareness. Next, we want to start 
+&lt;a href=&#34;/post/tracking-how-we-knew-about-a-problem/&#34;&gt;Tracking &lt;strong&gt;How&lt;/strong&gt; We Knew About a Problem&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tracking Who Knows About a Problem</title>
+      <link>/post/tracking-who-knows-about-a-problem/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/tracking-who-knows-about-a-problem/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Am I the First to Know?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;When the primary responder acknowledges an incident, they are announcing their awareness of the alert.&lt;/p&gt;
+&lt;p&gt;They may not have additional information yet, but like an alarm clock, they have to press the stop button and take action. This not only stops any continued alarms but indicates to others that YES, someone is aware and looking in to the problem.&lt;/p&gt;
+&lt;p&gt;Ok. Who else is aware? Do the right people know there is a problem?&lt;/p&gt;
+&lt;p&gt;And let&amp;rsquo;s say others are aware&amp;hellip; ?&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/tracking-what-is-being-done-about-a-problem/&#34;&gt;Tracking &lt;strong&gt;What&lt;/strong&gt; Is Being Done About a Problem&lt;/a&gt; is the next thing we&amp;rsquo;ll talk about.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Understanding the Foundations of Incident Response</title>
+      <link>/post/understanding-the-foundations-of-incident-response/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/understanding-the-foundations-of-incident-response/</guid>
+      <description>&lt;p&gt;The foundations of building reliable systems including a good incident response plan, have to start with determining “Who is expected to respond to problems?” and “How do let them know?”.&lt;/p&gt;
+&lt;p&gt;The best place to start, is to design what is to establish roles, rosters, and rotations.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Roles :&lt;/strong&gt; Well defined responsibilities and expectations of individuals on an on-call team (or roster). The &lt;strong&gt;Primary Responder&lt;/strong&gt;, for example.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Rosters :&lt;/strong&gt; A group of individuals, each with their own assigned role and understood responsibilities and expectations. The mobile &lt;em&gt;&amp;ldquo;on-call&amp;rdquo;&lt;/em&gt; team, consisting of multiple members each with thier own assigned role.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Rotations :&lt;/strong&gt; A scheduled shift for individuals where they are &lt;em&gt;&amp;ldquo;on-call&amp;rdquo;&lt;/em&gt; for a defined period of time. A 24 x n rotation where someone is the** Primary Responder**, for example.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s worth looking at each of these groups a little closer, so let&amp;rsquo;s do that now.&lt;/p&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/establishing-oncall-roles/&#34;&gt;Establishing On-call Roles&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

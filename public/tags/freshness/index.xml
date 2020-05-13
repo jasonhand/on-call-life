@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>freshness | On Call Life</title>
+    <link>/tags/freshness/</link>
+      <atom:link href="/tags/freshness/index.xml" rel="self" type="application/rss+xml" />
+    <description>freshness</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>freshness</title>
+      <link>/tags/freshness/</link>
+    </image>
+    
+    <item>
+      <title>Exploring the Freshness Aspect of Reliability</title>
+      <link>/post/exploring-the-freshness-aspect-of-reliability/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-the-freshness-aspect-of-reliability/</guid>
+      <description>&lt;p&gt;Freshness refers to how up-to-date the information is in situations where timeliness matters to the customer.&lt;/p&gt;
+&lt;p&gt;Freshness of what is available to users is a big component of reliability to many. If my travel booking tool is out of sync with the airline inventory, it&amp;rsquo;s frustrating to delay the process because something wasn&amp;rsquo;t &amp;ldquo;actually&amp;rdquo; available. Their information and therfore value to me is unreliable.&lt;/p&gt;
+&lt;p&gt;Examples would include sports scores or election results, in which the data is constantly and quickly changing. Freshness is not a factor for sites with static content that can remain the same over time, but if your site serves time-sensitive information, customers will expect that content to be kept current if they’re to consider the site reliable.&lt;/p&gt;
+&lt;p&gt;The next one is particularly important when running pipelines or batch processing systems.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/exploring-the-throughput-aspect-of-reliability/&#34;&gt;Exploring the Throughput Aspect of Reliability&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

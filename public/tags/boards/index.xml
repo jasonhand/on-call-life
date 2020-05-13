@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>boards | On Call Life</title>
+    <link>/tags/boards/</link>
+      <atom:link href="/tags/boards/index.xml" rel="self" type="application/rss+xml" />
+    <description>boards</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 24 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>boards</title>
+      <link>/tags/boards/</link>
+    </image>
+    
+    <item>
+      <title>Creating Custom Incident Reports and Charts in Azure Boards</title>
+      <link>/post/creating-custom-incident-reports-and-charts-in-azure-boards/</link>
+      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/creating-custom-incident-reports-and-charts-in-azure-boards/</guid>
+      <description>&lt;p&gt;For the most part, incidents are unique.&lt;/p&gt;
+&lt;p&gt;Therefore the lessons learned will vary from problem to problem. However, it&amp;rsquo;s helpful to spot trends in response efforts to both identify what is working and what needs improvement.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s also helpful for engineering teams to have a sense of how frequent problems are arising and how quickly they are addressed and resolved.&lt;/p&gt;
+&lt;p&gt;When tracking incidents using Azure Boards, it&amp;rsquo;s quite simple to build reports and charts provide a high level snapshot of incident management efforts.&lt;/p&gt;
+&lt;h2 id=&#34;create-a-query&#34;&gt;Create a Query&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Select the &lt;strong&gt;Queries&lt;/strong&gt; option in the left navigation
+&lt;img src=&#34;queries.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Customize the query&lt;/p&gt;
+&lt;p&gt;Select the  clauses, fields, and values of interest to easily build queries and report back information such as &lt;em&gt;&amp;ldquo;Show me &lt;strong&gt;ANY&lt;/strong&gt; incident&amp;rdquo;&lt;/em&gt; in this example.
+&lt;img src=&#34;new-query.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;ll see the results at the bottom of the screen. In our case we only have two incidents. One is &lt;strong&gt;resolved&lt;/strong&gt; and one is &lt;strong&gt;acknowledged&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Save the query&lt;/p&gt;
+&lt;p&gt;Press the &lt;strong&gt;Save query&lt;/strong&gt; menu option and give it a name such as &lt;strong&gt;&amp;ldquo;All Incidents&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;save-query.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;create-a-graph&#34;&gt;Create a Graph&lt;/h2&gt;
+&lt;p&gt;To create visualizations of the queries, begin by changing to the &lt;strong&gt;Charts&lt;/strong&gt; option.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Click on &lt;strong&gt;Charts&lt;/strong&gt;
+&lt;img src=&#34;charts.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Click on &lt;strong&gt;New Charts&lt;/strong&gt;
+&lt;img src=&#34;new-chart.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Configure the chart&lt;/p&gt;
+&lt;p&gt;Choose the type of chart you want to use (Pie in this example). Give the chart a name, such as &amp;ldquo;All Incidents - Chart&amp;rdquo;. Choose how you want the data grouped, like &amp;ldquo;State&amp;rdquo; (&lt;strong&gt;New Incident, Resolved, Acknowledged, etc.&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;Choose a color to represent the data and press Ok.
+&lt;img src=&#34;configure-chart.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now you have a high level visual to communicate the state of incidents.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;chart-view.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now that we&amp;rsquo;ve discussed ways to help track the response of an incident, let&amp;rsquo;s take a moment to discuss ways of 
+&lt;a href=&#34;/post/improving-the-remediation-of-incidents/&#34;&gt;Improving the Remediation of Incidents&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Customizing Azure Boards for Incident Tracking</title>
+      <link>/post/customizing-azure-boards-for-incident-tracking/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/customizing-azure-boards-for-incident-tracking/</guid>
+      <description>&lt;p&gt;Now that we have 
+&lt;a href=&#34;/post/creating-an-incident-tracking-tool-with-azure-boards/&#34;&gt;a tool to track the incident details&lt;/a&gt;, we need to ensure we are tracking all of the important aspects. Such as &lt;em&gt;When did we know about the problem&lt;/em&gt; and more.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s now take a look at how we can customize Azure Boards to track additional incident details.&lt;/p&gt;
+&lt;h2 id=&#34;when-did-we-know&#34;&gt;When did we know?&lt;/h2&gt;
+&lt;p&gt;When a new record (or incident) is created in Azure Boards we will automatically have the date and time as well as a change log throughout the incident&amp;rsquo;s lifecycle&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;when-did-we-know.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;However, it would be good to have a separate field where we can also capture when our systems were detecting the issue. It is possible that while no alerts were triggered for humans to respond, the data was there if only we were monitoring and alerting on it.&lt;/p&gt;
+&lt;h2 id=&#34;how-did-we-know&#34;&gt;How did we know?&lt;/h2&gt;
+&lt;p&gt;The default fields do not provide anything suitable to capture this information. We will need to create a new field to start tracking it.&lt;/p&gt;
+&lt;h2 id=&#34;who-is-aware&#34;&gt;Who is aware?&lt;/h2&gt;
+&lt;p&gt;Using the &lt;strong&gt;Assigned To&lt;/strong&gt; field we can attempt to communicate some awareness. If the first responder updates the State (to &lt;strong&gt;Acknowledged&lt;/strong&gt;), and sets the &lt;strong&gt;Assigned To&lt;/strong&gt; field to themself, it acknowledges to others that someone has been alerted and is investigating.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;who-is-aware.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;what-is-the-impact&#34;&gt;What is the impact?&lt;/h2&gt;
+&lt;p&gt;When possible, it&amp;rsquo;s best to include context such as &amp;ldquo;customer impacting&amp;rdquo; in the alert itself. This allows immediate contextual awareness and a sense of urgency. We can create a new field to track the official severity level.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-being-done&#34;&gt;What is being done?&lt;/h2&gt;
+&lt;p&gt;Naturally, anyone looking at the details of the incident are going to want to know what is being done. The &lt;strong&gt;description&lt;/strong&gt; and &lt;strong&gt;discussion&lt;/strong&gt; fields provide great places for responders or others assisting in the efforts to update the larger audience on what is being done and what expectations to have regarding future updates.&lt;/p&gt;
+&lt;p&gt;However, real-time updates on what is taking place can be found within the chat channel where engineers are collaborating during the response.&lt;/p&gt;
+&lt;p&gt;It would be useful to provide a link or information for others to follow if they would like to observe the conversation as it unfolds. We will need to create a field specifically related to the conversation.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s now customize Azure Boards to satisfy our basic needs of tracking an incident.&lt;/p&gt;
+&lt;h2 id=&#34;creating-new-fields&#34;&gt;Creating New Fields&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Click the &amp;ldquo;&lt;strong&gt;Customize&lt;/strong&gt;&amp;rdquo; option under the &lt;strong&gt;(&amp;hellip;)&lt;/strong&gt; in the upper right.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;customize-fields.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Before we create new fields, let&amp;rsquo;s first make changes to the &lt;strong&gt;&amp;ldquo;State&amp;rdquo;&lt;/strong&gt; of incidents to better align with industry terminology.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Click on &lt;strong&gt;+ New State&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Delete the existing ones and create new states that better align with terminology used. Such as &lt;strong&gt;Acknowledged&lt;/strong&gt; (ACK), &lt;strong&gt;Escalated&lt;/strong&gt;, etc.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;new-incident-states.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Click on &lt;strong&gt;Layout&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Then add new fields using the button below&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;new-fields.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Confirm changes&lt;/p&gt;
+&lt;p&gt;When you return to the incident, you&amp;rsquo;ll notice a warning message pointing out that the current state of &amp;ldquo;To do&amp;rdquo; does not match the existing options.&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;ll also see the new fields that we have added (Time to detection, source of alert, etc.)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;updated-incident.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This should be a good place to start capturing information that will be helpful and important to analyze in a post-incident review later.&lt;/p&gt;
+&lt;p&gt;With the information tracked in Azure Boards along with the conversations taking place in Microsoft Teams we will have a lot of great data to analyze.&lt;/p&gt;
+&lt;p&gt;From that analysis we will measure and establish baselines and expectations around incident response.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s important to discuss 
+&lt;a href=&#34;/post/measuring-incident-response/&#34;&gt;measuring incident response&lt;/a&gt; now. However, on our path to continuous improvement there are certain traps we want to avoid when examining incidents, especially in aggregate.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creating an Incident Tracking Tool with Azure Boards</title>
+      <link>/post/creating-an-incident-tracking-tool-with-azure-boards/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/creating-an-incident-tracking-tool-with-azure-boards/</guid>
+      <description>&lt;p&gt;Tracking incidents is as easy as setting up a datastore, like the table storage used for the on-call roster. However, why reinvent the wheel? Why not use something already available, customizable, extensible, and free?&lt;/p&gt;
+&lt;p&gt;Azure Boards is my tool of choice in this tutorial, but honestly this could probably be done with any popular project management tool with an API.&lt;/p&gt;
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    First, login or create a &lt;a href=&#34;https://azure.microsoft.com/?wt.mc_id=oncalllife-blog-jahand&#34;&gt;free Azure &lt;strong&gt;Devops&lt;/strong&gt; account&lt;/a&gt;.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Select an existing or create a new project in &lt;strong&gt;Azure Devops&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Click on &lt;strong&gt;Work Items&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In the left navigation menu, choose &lt;strong&gt;Work Items&lt;/strong&gt; under the Boards group. This is what we will use to track our incidents.&lt;/p&gt;
+&lt;p&gt;But before we do, we need to create a custom work item type and then start a new project based on different default options.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;work-items-boards.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Navigate to the &lt;strong&gt;Project Configuration&lt;/strong&gt; settings&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Project Settings&lt;/strong&gt; icon is in the lower left. Then select &lt;strong&gt;Project Configuration&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;From here we will create a custom work item type for incidents.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;project-settings.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Click the &amp;ldquo;&lt;strong&gt;go to the process customization page&lt;/strong&gt;&amp;rdquo; link in the upper right&lt;/p&gt;
+&lt;p&gt;This is where we can view existing &lt;strong&gt;Work Item Types&lt;/strong&gt; as well as create new ones. But first, we have to create a new inherited process in order to enable customizations.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;custom-work-item-types.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; Click on the &amp;ldquo;&lt;strong&gt;create an inherited process&lt;/strong&gt;&amp;rdquo; link near the top&lt;/p&gt;
+&lt;p&gt;Give it a name, such as &lt;code&gt;on-call&lt;/code&gt; and a description.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;create-inherited-process.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Once you click &amp;ldquo;&lt;strong&gt;Create process&lt;/strong&gt;&amp;rdquo; you&amp;rsquo;ll be returned to the previous screen where you can now select the &lt;strong&gt;+ New work item type&lt;/strong&gt; option.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;create-new-work-item-type.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Give it a name, like &lt;code&gt;Incident&lt;/code&gt;, a description, icon, and icon color. Then press create.&lt;/p&gt;
+&lt;p&gt;From the next screen click on &lt;strong&gt;Process&lt;/strong&gt; found in the &lt;strong&gt;Boards&lt;/strong&gt; section of the left navigation pane. You&amp;rsquo;ll see the new inherited process &amp;ldquo;on-call&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6.&lt;/strong&gt; Click the settings elipses &lt;strong&gt;(&amp;hellip;)&lt;/strong&gt; followed by &lt;strong&gt;+ New team project&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;7.&lt;/strong&gt; Click create &lt;strong&gt;new project&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;new-team-project-option.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Give the project a name, description, and a few other selections and press &lt;strong&gt;create&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;create-new-project.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;We will use this new project for all incident tracking leaving the original project for something else.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s check to see if our new work item type is available. Return to Azure Boards.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;8.&lt;/strong&gt; Click the &lt;strong&gt;+ New Work Item&lt;/strong&gt; option&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;ll now see an additional work item type of &amp;ldquo;&lt;strong&gt;incident&lt;/strong&gt;&amp;quot;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;see-new-work-item-type.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Select the Incident option to view the default fields available to track details.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;create-new-work-item.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;We can see that we have a number of fields available to us by default such as &lt;strong&gt;Assigned To&lt;/strong&gt;, &lt;strong&gt;State&lt;/strong&gt;, &lt;strong&gt;Discussion&lt;/strong&gt;, and more.&lt;/p&gt;
+&lt;p&gt;We now have a basic way of tracking incidents. Any time an incident is detected, we can add a new work item type of &amp;ldquo;incident&amp;rdquo; along with the important details so that there is a central place for everyone to stay informed.&lt;/p&gt;
+&lt;p&gt;However, the default settings only provide us a few important things that we want to track. We mentioned before that we&amp;rsquo;d like to track when, how, who, and what we know about the incident.&lt;/p&gt;
+&lt;p&gt;We can easily add and modify fields within Azure Boards to allow for tracking additional details we know are important to our incident response efforts.&lt;/p&gt;
+&lt;p&gt;Now, let&amp;rsquo;s talk about ways of 
+&lt;a href=&#34;/post/customizing-azure-boards-for-incident-tracking/&#34;&gt;Customizing Azure Boards for Incident Tracking&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

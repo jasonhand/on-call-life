@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>reliability | On Call Life</title>
+    <link>/tags/reliability/</link>
+      <atom:link href="/tags/reliability/index.xml" rel="self" type="application/rss+xml" />
+    <description>reliability</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>reliability</title>
+      <link>/tags/reliability/</link>
+    </image>
+    
+    <item>
+      <title>Building Service Level Indicators With Log Analytics</title>
+      <link>/post/building-service-level-indicators-with-log-analytics/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/building-service-level-indicators-with-log-analytics/</guid>
+      <description>&lt;p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Ds_7EKMS3N8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/understanding-service-level-objectives/&#34;&gt;Understanding Service Level Objectives (SLOs)&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Building Service Level Objectives With Log Analytics</title>
+      <link>/post/building-service-level-objectives-with-log-analytics/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/building-service-level-objectives-with-log-analytics/</guid>
+      <description>&lt;p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/ztZ7RSdwatc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/sending-actionable-alerts/&#34;&gt;Sending Actionable Alerts&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Defining Site Reliability Engineering</title>
+      <link>/post/defining-site-reliability-engineering/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/defining-site-reliability-engineering/</guid>
+      <description>&lt;p&gt;Site Reliability Engineering is an engineering discipline devoted to helping
+organizations sustainably achieve the appropriate level of reliability in their
+systems, services, and products.&lt;/p&gt;
+&lt;p&gt;The key concepts to take away from this definition are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Reliability.&lt;/strong&gt; You learned in the introductory module that there are
+multiple aspects to reliability and later in this module, you’ll examine
+each in more detail. You also learned about the importance of reliability –
+why it matters.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Sustainability.&lt;/strong&gt; In this context, “sustainable” refers to the role of
+people in creating a sustainable operations practice. Reliable systems,
+services, products are built by people. It is crucial to the concept of SRE
+to implement an operations practice that is sustainable over time, so that
+people are able to bring their best to the job.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Appropriateness.&lt;/strong&gt; It’s important to understand that 100% reliability
+isn’t often possible, especially in today’s complex systems with
+dependencies on other systems. 100% reliability means zero down time, which
+also means no opportunity to make any changes or improvements that could
+create some down time. Instead of striving for a goal of absolute
+reliability, determine the appropriate level of reliability for a particular
+application or service.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The role of a site reliability engineer bridges the span between operations and
+development but also goes beyond DevOps, and the SRE philosophy is the basis of
+a new and more efficient and effective approach to building and operating
+reliable systems and applications.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Examining All Aspects of Reliability</title>
+      <link>/post/examining-all-aspects-of-reliability/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/examining-all-aspects-of-reliability/</guid>
+      <description>&lt;p&gt;When deciding what to monitor for reliability it becomes clear that there are many approaches because there are many aspects to reliability. It&amp;rsquo;s important to examine the reliability of your service from the user&amp;rsquo;s perspective to determine what is important and how to prioritize.&lt;/p&gt;
+&lt;h2 id=&#34;what-does-reliability-mean-to-the-user&#34;&gt;What Does Reliability Mean to the User?&lt;/h2&gt;
+&lt;p&gt;To determine the reliability of a system, service, application, or process many look to a combination of the following eight aspects of reliability.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Availability&lt;/li&gt;
+&lt;li&gt;Latency&lt;/li&gt;
+&lt;li&gt;Throughput&lt;/li&gt;
+&lt;li&gt;Coverage&lt;/li&gt;
+&lt;li&gt;Correctness&lt;/li&gt;
+&lt;li&gt;Fidelity&lt;/li&gt;
+&lt;li&gt;Freshness&lt;/li&gt;
+&lt;li&gt;Durability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once it is determined which aspects to measure and how, we can begin understanding the behavior of our systems under &amp;ldquo;normal&amp;rdquo; conditions.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;aspects-of-reliability.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;establish-a-baseline&#34;&gt;Establish a Baseline&lt;/h2&gt;
+&lt;p&gt;Establishing a baseline of reliable performance helps set expectations and recognize deviations from what you might call &amp;ldquo;normal&amp;rdquo;. Once you have a baseline, you can do a comparison.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/exploring-the-availability-aspect-of-reliability/&#34;&gt;Exploring the Availability Aspect of Reliability&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NOTE: Look in to &amp;ldquo;The Golden Signals&amp;rdquo; - Jason Hand&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring the Availability Aspect of Reliability</title>
+      <link>/post/exploring-the-availability-aspect-of-reliability/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-the-availability-aspect-of-reliability/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Can people reach a website or service?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is typically the first thing people think of when talking about reliability. Can &amp;ldquo;the thing&amp;rdquo; be reached (and used) when expected?&lt;/p&gt;
+&lt;p&gt;This is important from the perspective of both external and internal users who depend on a service. Because of this, availability is a good place to start discussing reliability.&lt;/p&gt;
+&lt;h2 id=&#34;availability&#34;&gt;Availability&lt;/h2&gt;
+&lt;p&gt;If a service can&amp;rsquo;t be reached at all then it is of no value to its intended user and in some cases detrimental. Availability lets us communicate whether or not our service is ready to go.&lt;/p&gt;
+&lt;p&gt;In terms of monitoring for availability, we could set alerts for low disk space of service. This could tip us off to an imminent problem that is known to impact the availability of a service.&lt;/p&gt;
+&lt;p&gt;We could also examine logs that tell us in aggregate what the customer is experiencing when attempting to communicate with our service. Are they gaining access or receiving responses? Or are they seeing 404 and 501 error codes?&lt;/p&gt;
+&lt;p&gt;Answering those questions gives a more accurate picture of the availability of your service. Just because everything appears to be working, does not mean that is what your user is seeing.&lt;/p&gt;
+&lt;p&gt;You can&amp;rsquo;t always do something about availability. The number of hops between a website and a person&amp;rsquo;s mobile device is astounding. Failure could happen at any point between them.&lt;/p&gt;
+&lt;p&gt;The closer we can measure that experience from their perspective, the better off we&amp;rsquo;ll be in measuring our availability.&lt;/p&gt;
+&lt;p&gt;The next aspect of reliability that often gets a lot of attention is latency. Despite your service being available, if it takes too long to communicate back and forth, there&amp;rsquo;s no denying it is a bad experience for the user. In the high speed world, patience for slow services is nearly non-existent.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/exploring-the-latency-aspect-of-reliability/&#34;&gt;Exploring the Latency Aspect of Reliability&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring the Correctness Aspect of Reliability</title>
+      <link>/post/exploring-the-correctness-aspect-of-reliability/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-the-correctness-aspect-of-reliability/</guid>
+      <description>&lt;p&gt;Did the process that you ran on the data yield the correct or expected result? For each input it produced the expected output.&lt;/p&gt;
+&lt;p&gt;This is an important factor to include in monitoring for reliability.&lt;/p&gt;
+&lt;p&gt;No matter how fast or “always available” your service or site is, if it returns incorrect results, it’s not reliable in the eyes of your customers.&lt;/p&gt;
+&lt;p&gt;Monitoring for correctness of results is an important part of monitoring for reliability.&lt;/p&gt;
+&lt;p&gt;Next, let&amp;rsquo;s talk about an aspect of reliability that those who work large amounts of data or records are likely to be familiar with, coverage. Did it process all the data?&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/exploring-the-coverage-aspect-of-reliability/&#34;&gt;Exploring the Coverage Aspect of Reliability&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring the Coverage Aspect of Reliability</title>
+      <link>/post/exploring-the-coverage-aspect-of-reliability/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-the-coverage-aspect-of-reliability/</guid>
+      <description>&lt;p&gt;Coverage refers to how much of the data that you expected to process was
+actually processed.&lt;/p&gt;
+&lt;p&gt;Reliability means getting the whole job done, every time. How can we monitor for that in a way that indicates what it&amp;rsquo;s like as a user?&lt;/p&gt;
+&lt;p&gt;Another aspect of reliablity that is closely tied to data is our next one, durability. It is really crucial that data written to the service can be read back out again later when desired.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/exploring-the-durability-aspect-of-reliability/&#34;&gt;Exploring the Durability Aspect of Reliability&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring the Durability Aspect of Reliability</title>
+      <link>/post/exploring-the-durability-aspect-of-reliability/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-the-durability-aspect-of-reliability/</guid>
+      <description>&lt;p&gt;Durability generally relates to longevity and resilience. It’s the ability to remain functional over time.&lt;/p&gt;
+&lt;p&gt;Durability is especially important in situations such as storage systems where it is really crucial that a bit written to the service can be read back out again later when desired.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/exploring-the-fidelity-aspect-of-reliability/&#34;&gt;Exploring the Fidelity Aspect of Reliability&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring the Fidelity Aspect of Reliability</title>
+      <link>/post/exploring-the-fidelity-aspect-of-reliability/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-the-fidelity-aspect-of-reliability/</guid>
+      <description>&lt;p&gt;Fidelity pertains to the ability of your service to continue to provide a reduced or degraded experience when something goes wrong.&lt;/p&gt;
+&lt;p&gt;For example, if different parts of the home page on your website are provided by different microservices, and one of those microservices goes down, ideally you can still serve the home page with only that section missing or replaced with some static content.&lt;/p&gt;
+&lt;p&gt;Fidelity, then, is the measure of how often the page served that degraded or partial experience in comparison to serving the full page as intended with full fidelity.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s common to architect systems in these graceful degradated states.&lt;/p&gt;
+&lt;p&gt;However, this means we need to pay attention to just how often and for what duration those degradations are taking place. Users will appreciate the resilient design but lose support if something is always broken from their perspective.&lt;/p&gt;
+&lt;p&gt;The next aspect of reliability applies to users who need real time information, updates, and access to take action on something.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/exploring-the-freshness-aspect-of-reliability/&#34;&gt;Exploring the Freshness Aspect of Reliability&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring the Freshness Aspect of Reliability</title>
+      <link>/post/exploring-the-freshness-aspect-of-reliability/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-the-freshness-aspect-of-reliability/</guid>
+      <description>&lt;p&gt;Freshness refers to how up-to-date the information is in situations where timeliness matters to the customer.&lt;/p&gt;
+&lt;p&gt;Freshness of what is available to users is a big component of reliability to many. If my travel booking tool is out of sync with the airline inventory, it&amp;rsquo;s frustrating to delay the process because something wasn&amp;rsquo;t &amp;ldquo;actually&amp;rdquo; available. Their information and therfore value to me is unreliable.&lt;/p&gt;
+&lt;p&gt;Examples would include sports scores or election results, in which the data is constantly and quickly changing. Freshness is not a factor for sites with static content that can remain the same over time, but if your site serves time-sensitive information, customers will expect that content to be kept current if they’re to consider the site reliable.&lt;/p&gt;
+&lt;p&gt;The next one is particularly important when running pipelines or batch processing systems.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/exploring-the-throughput-aspect-of-reliability/&#34;&gt;Exploring the Throughput Aspect of Reliability&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring the Latency Aspect of Reliability</title>
+      <link>/post/exploring-the-latency-aspect-of-reliability/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-the-latency-aspect-of-reliability/</guid>
+      <description>&lt;p&gt;Latency refers to the amount of delay between a request and a response.&lt;/p&gt;
+&lt;h2 id=&#34;slow-is-the-new-down&#34;&gt;Slow is the New Down&lt;/h2&gt;
+&lt;p&gt;Today’s users have high expectations.&lt;/p&gt;
+&lt;p&gt;They demand fast performance and have little patience with a site or service that leaves them waiting. Reliability means the site is not only available, but available in a reasonable amount of time.&lt;/p&gt;
+&lt;p&gt;Especially for external customer interactions – for example, when a customer visits your company’s website – it is critical that the service respond as quickly as possible. A slow website can drive your customers to your competitors.&lt;/p&gt;
+&lt;p&gt;Azure is always 
+&lt;a href=&#34;https://docs.microsoft.com/en-us/azure/networking/azure-network-latency/?wt.mc_id=oncalllife-blog-jahand&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;monitoring latency from points all around the world&lt;/a&gt; to ensure speeds are within pre-defined limits.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.microsoft.com/en-us/azure/networking/media/azure-network-latency/azure-network-latency.png&#34; alt=&#34;azure latency&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s say your service is available and fast, what else might users care about?&lt;/p&gt;
+&lt;p&gt;If your service returns the wrong thing, it’s not reliable in the eyes of your customers.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s supposed to work as advertised. If it returns the wrong results, calculates a bad value, or generally doesn&amp;rsquo;t do what it&amp;rsquo;s supposed to do &amp;ldquo;correctly&amp;rdquo;, it&amp;rsquo;s not relable to the user. Who wants to use a service that can&amp;rsquo;t calculate for leap year, let alone manage your bank account?&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://azurespeedtest.azurewebsites.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Take a look at the latency of Azure datacenters from your current location&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://azurespeedtest.azurewebsites.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;latency-speed.gif&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://azurespeed.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Another one can be found here:&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://azurespeed.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;latency-test.gif&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/exploring-the-correctness-aspect-of-reliability/&#34;&gt;Exploring the Correctness Aspect of Reliability&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring the Throughput Aspect of Reliability</title>
+      <link>/post/exploring-the-throughput-aspect-of-reliability/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-the-throughput-aspect-of-reliability/</guid>
+      <description>&lt;p&gt;Throughput is a measure of the rate at which something is processed, or the number of transactions that a website, application, or service successfully handles over a specified period of time.&lt;/p&gt;
+&lt;p&gt;There are many factors that can affect throughput. Monitoring throughput can help you pinpoint potential problems that impact your users’ experience.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s been said already but worth repeating often; The aspects of reliability must be measured and examined from the customer&amp;rsquo;s perspective. Objective data from as close as you can get to what they are truly experiencing provides the truest depecition of what its like to use your service.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/measuring-reliability-from-the-customers-perspective/&#34;&gt;Measuring Reliability From the Customer&amp;rsquo;s Perspective&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring Why Incidents are Unexpected</title>
+      <link>/post/exploring-why-incidents-are-unexpected/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-why-incidents-are-unexpected/</guid>
+      <description>&lt;p&gt;In other words &amp;hellip; unplanned Work&lt;/p&gt;
+&lt;p&gt;Most of what we as engineers and technologists do is planned work.&lt;/p&gt;
+&lt;p&gt;We spend a lot of time and effort understanding the work in front of us.&lt;/p&gt;
+&lt;p&gt;We calculate story points.  We plan sprints. We have a pretty good idea on what we are supposed to be working on.&lt;/p&gt;
+&lt;p&gt;So, when an incident occurs, it is disruptive. It is&amp;hellip; unplanned work.&lt;/p&gt;
+&lt;p&gt;Often, we view this as a terrible thing, but in reality, incidents are actually “investments” in supplying the value we are trying to deliver to end users.&lt;/p&gt;
+&lt;p&gt;We just need to change how we look at incidents.&lt;/p&gt;
+&lt;p&gt;Next we&amp;rsquo;ll discuss the full lifecycle of an incident. From detection to analysis and everything in between. When we start to view incidents through a new lense and begin analyzing for opportunities to learn, you&amp;rsquo;ll begin to see your systems for what they are and why having a response plan in place makes sense.&lt;/p&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/understanding-the-full-lifecycle-of-an-incident&#34;&gt;Understanding the Full Lifecycle of An Incident&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Measuring Reliability From the Customer&#39;s Perspective</title>
+      <link>/post/measuring-reliability-from-the-customers-perspective/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/measuring-reliability-from-the-customers-perspective/</guid>
+      <description>&lt;p&gt;These eight components cover a big part of reliability. Not all of the factors will apply in every situation.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;reliability-customer-perspective.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When considering these factors, the most important point to remember is (again) that reliability has to be measured from the customer’s perspective, not the component perspective. Knowing our CPU&amp;rsquo;s running at over 90% utilization has no correlation to what our users are experiencing, let alone doing.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/understanding-measurements-of-reliability/&#34;&gt;Understanding Measurements of Reliability&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Monitoring For Operational Awareness</title>
+      <link>/post/monitoring-for-operational-awareness/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/monitoring-for-operational-awareness/</guid>
+      <description>&lt;p&gt;Sustainably achieving an appropriate level of reliability first requires that you know what’s going on with your systems and services. You find that out by monitoring. Before you can effectively monitor for reliability, however, you must have a reasonable level of operational awareness. This means you need to
+understand how systems in production are functioning in order to work toward reliability of those systems.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/monitoring-for-operational-awareness/operational-awareness.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Today’s production environments and the paths by which we deploy systems and applications are complex. Thus, it is not uncommon to have to do a bit of discovery to obtain an operational awareness baseline.&lt;/p&gt;
+&lt;p&gt;Some questions to ask include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;What exactly is running in production?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Given a specific application, what are its component parts?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Which of those parts communicate with which other parts?&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are also some more complex factors that you’ll want to examine to give you a better understanding of your systems and services and how to make them more reliable.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;How did the app or service perform in the past?&lt;/strong&gt; It’s true that “past
+performance is no guarantee of future results.” However, knowledge about
+past performance can be useful in calibrating expectations, and awareness of
+past outages can provide you with a sense of potential failure modes that
+you should incorporate into your thought processes around reliability.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;What is the socio-technical context?&lt;/strong&gt; In other words, who owns or cares
+about the service or app? How did it get deployed? Information about the
+stakeholders, as well as knowing, for example, whether it was deployed by
+hand or via an automated process can have many ramifications when we begin
+to make updates to improve reliability.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The answers to all these questions will help you to build a baseline around “normal” behavior.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/monitoring-for-reliability/&#34;&gt;Monitoring For Reliability&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Monitoring For Reliability</title>
+      <link>/post/monitoring-for-reliability/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/monitoring-for-reliability/</guid>
+      <description>&lt;p&gt;The world today is extremely connected.&lt;/p&gt;
+&lt;p&gt;Digital services have become so embedded in our daily lives that when they become unavailable, it often has an adverse effect on our own livelihoods. Like electricity and running water, we don&amp;rsquo;t realize our reliance on it until it&amp;rsquo;s suddenly unavailable.&lt;/p&gt;
+&lt;h2 id=&#34;monitoring&#34;&gt;Monitoring&lt;/h2&gt;
+&lt;p&gt;Monitoring is a way of collecting information about what is going on in your systems so you can improve things as well as make objectively informed decisions. 
+&lt;a href=&#34;https://docs.microsoft.com/en-us/azure/azure-monitor/overview/?wt_mc_id=oncalllife-blog-jahand&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Azure Monitor&lt;/a&gt; is an example of tooling that allows this type of collection and analysis.&lt;/p&gt;
+&lt;p&gt;Many aspects of a system can be monitored. From the component level (CPU, Memory) to business impact and everything in between. We might gauge performance, examine security, or (in our case) evaluate and improve reliability.&lt;/p&gt;
+&lt;h2 id=&#34;reliability&#34;&gt;Reliability&lt;/h2&gt;
+&lt;p&gt;When monitoring for reliability, we are trying to proactively manage not only the availability of a service, but many aspects of reliability.&lt;/p&gt;
+&lt;p&gt;Depending on the service and the expectations of the end user, some aspects of reliability may be more valuable than others.&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;strong&gt;Exercise:&lt;/strong&gt; &lt;br /&gt; Discuss and document perceived expectations users have regarding the reliability of your service?
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;To determine what to monitor, continue with  
+&lt;a href=&#34;/post/examining-all-aspects-of-reliability/&#34;&gt;Examinging All Aspects of Reliability&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Understanding Service Level Indicators</title>
+      <link>/post/understanding-service-level-indicators/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/understanding-service-level-indicators/</guid>
+      <description>&lt;p&gt;
+&lt;a href=&#34;https://docs.microsoft.com/en-us/azure/site-reliability-engineering/?wt.mc_id=oncalllife-blog-jahand&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Site Reliability Engineering&lt;/a&gt; uses SLIs and SROs to measure the aspects of reliability that you learned about in Unit 2: availability, latency, throughput, coverage, correctness, fidelity, freshness, and durability, and whether you are
+meeting expectations in each applicable area.&lt;/p&gt;
+&lt;h2 id=&#34;what-to-measure&#34;&gt;What to measure&lt;/h2&gt;
+&lt;p&gt;The first question to ask in relation to the aspect you want to measure is &lt;em&gt;what&lt;/em&gt; to measure.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example #1: Measure availability&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;How would you determine the availability of a web server?&lt;/p&gt;
+&lt;p&gt;You can do this by measuring the number of HTTP calls the server received and the number to which it successfully responded. This ratio of successful calls to total calls gives you an understanding of the server’s reliability. Multiplying the ratio by 100 gives you a percentage.&lt;/p&gt;
+&lt;p&gt;$$
+\ [\frac {success}{total}] = ratio
+$$&lt;/p&gt;
+&lt;p&gt;example&lt;/p&gt;
+&lt;p&gt;$$
+\ [\frac {800}{1000}] = .8
+$$&lt;/p&gt;
+&lt;p&gt;For example, if the ratio is 0.8 and you multiply by 100, you can conclude that the web server has been available only 80% of the time.&lt;/p&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;p&gt;$$
+\ .8 * 100 = 80 percent
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example #2: Measure latency&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To get an idea of the latency of the web service, you can measure the number of operations that were completed in fewer than 10 milliseconds against the number of total operations.&lt;/p&gt;
+&lt;p&gt;If, for example, dividing the first number by the second gives you a ratio of 0.8, and you multiply this by 100, your service has an 80% success rate by this measurement.&lt;/p&gt;
+&lt;h2 id=&#34;where-to-measure&#34;&gt;Where to measure&lt;/h2&gt;
+&lt;p&gt;To have a clear picture of your reliability based on SLIs, you need to know not only what was measured, but also &lt;em&gt;where&lt;/em&gt; the measurement was taken.&lt;/p&gt;
+&lt;p&gt;For example, in measuring the availability of the web server above, you need to specify whether the number of calls was measured at the load balancer or at the server. Likewise, when measuring the latency of the web service, you should note that the number of operations was measured at the client.&lt;/p&gt;
+&lt;p&gt;Why is this so crucial? If the purpose is to create a feedback loop in your organization, in which you are able to have conversations about reliability using objective data, it is important for the people having these conversations to be using the same data.&lt;/p&gt;
+&lt;p&gt;To use a previous example, if you are trying to determine whether a web service is meeting expectations and one person looks at data collected at the server itself while another looks at data collected at the load balancer in front of that web server, you may be looking at radically different sets of numbers. The
+information collected from the web server itself only reflects the traffic that actually reached that server. If there was an issue with the load balancer or the network and half the packets never reached the web server, the two people will have a very different picture of the situation, especially when it comes to
+total number of requests.&lt;/p&gt;
+&lt;p&gt;This leads to the logical question: where is the best place to measure SLIs?&lt;/p&gt;
+&lt;p&gt;Unfortunately, there is not a universally “correct” answer. It’s a decision you must make with an understanding that there are tradeoffs either way.&lt;/p&gt;
+&lt;p&gt;The key thing to keep in mind is based on our “prime directive” of reliability measurement: &lt;em&gt;Reliability should be measured from the customer’s perspective.&lt;/em&gt;
+Thus, most of the time, you should measure at the point that most accurately reflects the customer’s experience.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/building_service_level_indicators_with_log_analytics/&#34;&gt;Building Service Level Indicators (SLIs) with Log Analytics&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Understanding Service Level Objectives</title>
+      <link>/post/understanding-service-level-objectives/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/understanding-service-level-objectives/</guid>
+      <description>&lt;p&gt;Now you know how to measure reliability using SLIs, but the ratios and
+percentages that you’ve calculated only get you halfway toward fulfilling the
+goal of site reliability engineering. You can now say the web server in our
+example is 50% reliable, but is that the &lt;em&gt;appropriate level of reliability&lt;/em&gt; as
+discussed in our definition of SRE?&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s also useful to know the period of time to which that reliability level
+applied. For how long was that 50% success rate maintained?&lt;/p&gt;
+&lt;p&gt;To answer these questions, you need to look at Service Level Objectives. SLOs
+are statements of the objective you have from a reliability standpoint, based on
+customer expectations. The basic recipe for creating an SLO consists of these
+ingredients:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;The “thing” you’re going to measure –&lt;/strong&gt; number of requests, storage
+checks, operations; &lt;em&gt;what&lt;/em&gt; you’re measuring.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;The desired proportion&lt;/strong&gt; – for example, “successful 50% of the time,” “can
+read 99.9% of the time,” “return in 10ms 90% of the time.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;The time&lt;/strong&gt; – what timeframe are you measuring: the last 10 minutes, during
+the last quarter, in the previous 30 days, etc.?&lt;/p&gt;
+&lt;p&gt;Putting these components together and including the important “where”
+information, a sample SLO might look like this:&lt;/p&gt;
+&lt;p&gt;“90% of HTTP requests as reported by the load balancer succeeded in the last
+30 day window.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/building-service-level-objectives-with-log-analytics/&#34;&gt;Building Service Level Objectives with Log Analytics&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Understanding the Measurements of Reliability</title>
+      <link>/post/understanding-measurements-of-reliability/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/understanding-measurements-of-reliability/</guid>
+      <description>&lt;p&gt;Now that we have a better idea on the different things that we could be measuring, let&amp;rsquo;s talk about what to do with the data.&lt;/p&gt;
+&lt;p&gt;Operational practices to create reliability feedback loops known as service level indicators and objectives help transform the reliability discussion.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Service Level Indicators&lt;/strong&gt; are the measurements that you use to determine
+whether you have reached those goals; in other words, the &lt;em&gt;indicators&lt;/em&gt; that
+your service is behaving reliably.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Service Level Objectives&lt;/strong&gt; are simply the goals that you’ve set, based on
+the &lt;em&gt;appropriate level of reliability&lt;/em&gt; that you want to reach.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can use SLIs and SLOs to set appropriate goals based on the different aspects of reliability and to determine whether you are meeting those goals, using simple calculations and a basic recipe.&lt;/p&gt;
+&lt;p&gt;Now you’ll find out how to actually measure the success of your reliability efforts using Service Level Indicators (SLIs) and Service Level Objectives (SLOs).&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/understanding-service-level-indicators/&#34;&gt;Understanding Service Level Indicators (SLI)&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

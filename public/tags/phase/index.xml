@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>phase | On Call Life</title>
+    <link>/tags/phase/</link>
+      <atom:link href="/tags/phase/index.xml" rel="self" type="application/rss+xml" />
+    <description>phase</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>phase</title>
+      <link>/tags/phase/</link>
+    </image>
+    
+    <item>
+      <title>Identifyig the Incident Remediation Phase</title>
+      <link>/post/identifying-the-incident-remediation-phase/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/identifying-the-incident-remediation-phase/</guid>
+      <description>&lt;p&gt;The remediation phase is the blurriest of them all. A big reason is that sometimes there&amp;rsquo;s no difference between what takes place during the response and an action intended to improve the situation (i.e. remediation step).&lt;/p&gt;
+&lt;p&gt;Much of incident response is just trial and error, quite honestly. We quickly think through what to do, we do it, we hope for quick feedback, we examine if things improved, and we iterate.&lt;/p&gt;
+&lt;p&gt;Because of this, measuring the remediation phase is a bit trickier.&lt;/p&gt;
+&lt;p&gt;What we are looking for is to determine the distinction between when we have &lt;em&gt;identified the fix&lt;/em&gt; (or series of fixes) that will result in recovery of services and the end of the incident. What is the time between? Good or bad, it&amp;rsquo;s data to potentially discuss and discover revelations.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s not until the analysis phase that engineers can definitively determine the exact point along the incident timeline that everyone agrees the problem and solution were both understood.&lt;/p&gt;
+&lt;p&gt;This underlines the importance of not only capturing the timeline of events, including conversations and actions taken but also analyzing it in retrospect with a diverse audience encouraged to ask questions. Questions that help radiate a broader and more informed knowledge base across an organization.&lt;/p&gt;
+&lt;p&gt;One reason for measuring this way is to set aside the time between definitively knowing what will restore service and when services were actually back.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s say the payment process thing from before was pretty easy to determine. It probably took less than 5 minutes to know it was something with the backend talking to an API and that after someone followed a specific series of steps everything would be fine.&lt;/p&gt;
+&lt;p&gt;However, the process to do this is not only complicated and requires administrative access, it&amp;rsquo;s not well documented, and what is documented is extremely dated.&lt;/p&gt;
+&lt;p&gt;If this type of problem occurs again, we could shorten the total time of the incident, and therefore cost to the business, simply by making a few small adjustments.&lt;/p&gt;
+&lt;p&gt;These types of opportunities begin to surface when we can ask questions like, &amp;ldquo;how long does the backup script take?&amp;quot;. &amp;ldquo;Was the documentation helpful?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Just because you can figure out what the problem is in an acceptable amount of time, does not mean your system will recover as quickly as the business needs it to.&lt;/p&gt;
+&lt;p&gt;Once service is restored and things return to normal it&amp;rsquo;s important to set aside time to reflect on what took place, discuss it openly, broadcast what has been learned, and prepare for the future.&lt;/p&gt;
+&lt;p&gt;This takes us to our next phase of the incident lifecycle - analysis.&lt;/p&gt;
+&lt;h2 id=&#34;next&#34;&gt;Next&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/identifying-the-incident-analysis-phase/&#34;&gt;Identifying the Analysis Phase of an Incident&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Identifying the Incident Analysis Phase</title>
+      <link>/post/identifying-the-incident-analysis-phase/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/identifying-the-incident-analysis-phase/</guid>
+      <description>&lt;p&gt;The post-incident review is where the idea of incidents begin to shift from things that are feared and avoided to things that can provide valuable information to a team and business.&lt;/p&gt;
+&lt;p&gt;Rarely will you find a business today that doesn&amp;rsquo;t heavily rely on digital services to earn and keep customers. There are going to be problems along the way. Not only that, but customers expect improvements, technology changes, competitors get smarter. There are fewer and fewer industries that can maintain the status quo and continue to exist, let alone prosper.&lt;/p&gt;
+&lt;p&gt;The analysis phase allows for an honest and open retrospective discussion about what took place. We as an organization want to understand the realities of the scenario from an objective perspective.&lt;/p&gt;
+&lt;p&gt;Exactly how you conduct the exercises will vary but the focus of the conversation is on what and how things happened rather than who and why.&lt;/p&gt;
+&lt;p&gt;By identifying the incident timeline as well as the specific highlights, people can identify the beginning and end of each phase, including the conversations that took place.&lt;/p&gt;
+&lt;p&gt;This helps isolate specific areas of improvements such as moving away from using email distribution lists as the default channel and method of delivering actionable alerts. In discussions about the detection phase, it seemed clear to everyone that the problem could have been solved sooner had they known about it sooner. Sometimes even small changes can have a huge impact on improving the overall time to recover.&lt;/p&gt;
+&lt;p&gt;Regardless of how businesses choose to perform their post-incident review, they should take place no more than 36-48 hours after the incident has concluded.&lt;/p&gt;
+&lt;p&gt;We are looking to collect as much objective data as well as testimonial from a diverse set of perspectives. It&amp;rsquo;s difficult to remember what took place in much detail after a couple of days.&lt;/p&gt;
+&lt;p&gt;If possible, the exercise should be facilitated by someone that was not involved in the incident. Someone who can remove themselves from the timeline of events and perspectives of what took place. Objective data is often easier to obtain when someone else asks the questions and encourages an honest conversation.&lt;/p&gt;
+&lt;p&gt;The point of a post-incident review isn&amp;rsquo;t to end up with a document or artifact that the meeting took place. It&amp;rsquo;s not an exploration on what definitively caused the issue in the first place.&lt;/p&gt;
+&lt;p&gt;Our systems are always changing. That&amp;rsquo;s just where we are today. Businesses that are providing some kind of service to their customers where technology is involved are required to make constant changes. It doesn&amp;rsquo;t matter if it&amp;rsquo;s in the cloud, data center, or closet, servers need improvements and replacements. Operating systems need patches and upgrades. Applications need to be updated and restarted. Databases and logs are changing and growing. Networks are coming and going. There&amp;rsquo;s a lot going on and it&amp;rsquo;s often difficult to put our thumb on exactly what&amp;rsquo;s causing what.&lt;/p&gt;
+&lt;p&gt;The good news is, it&amp;rsquo;s ok.&lt;/p&gt;
+&lt;p&gt;Part of the advantage of examining incidents in phases means that regardless to the problems we experience in the future, we know that we can detect a problem, get the right people involved, and recover services faster than before. We are prepared for the infinite world of possibilities we like to call the &amp;ldquo;unknown unknowns&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;This takes us to our final phase of the incident lifecycle, readiness.&lt;/p&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/identifying-the-incident-readiness-phase&#34;&gt;Identifying the Readiness Phase of an Incident&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Identifying the Incident Detection Phase</title>
+      <link>/post/identifying-the-incident-detection-phase/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/identifying-the-incident-detection-phase/</guid>
+      <description>&lt;p&gt;The methods used to determine when we have a problem have changed over the years.&lt;/p&gt;
+&lt;p&gt;Alerting a person to a spike in CPU usage isn&amp;rsquo;t as valuable these days. Especially those in the process of adopting the cloud. Instead, we want to know when our customer is experiencing a problem while using our system.&lt;/p&gt;
+&lt;p&gt;The problems will vary but the methods used to determine when a human needs to get involved have evolved.&lt;/p&gt;
+&lt;p&gt;By monitoring systems in a way that matches the customer&amp;rsquo;s perspective we can see when they experience a problem rather than we &lt;em&gt;think&lt;/em&gt; we experienced a problem.&lt;/p&gt;
+&lt;p&gt;If the customer is experiencing an issue, that&amp;rsquo;s far more important to the business than any spike in CPU usage.&lt;/p&gt;
+&lt;p&gt;In today&amp;rsquo;s connected world, no matter how complex or simple a system appears to be there is much more that goes in to what a user experiences.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s entirely possible that all systems appear healthy and no alarms are going off when in reality users aren&amp;rsquo;t able to complete a shopping purchase due to a third party payment processor. No amount of monitoring for memory or network performance would have tipped off engineers or leadership to this business impacting problem.&lt;/p&gt;
+&lt;p&gt;Every system is different and while there may be legitimate reasons to set up alerts for problems at the component level. However, by and large if we are planning to get engineers involved (especially outside of office hours) then we need to make sure the problem is real, it&amp;rsquo;s impacting the business, and it requires human intervention immediately.&lt;/p&gt;
+&lt;p&gt;If an alert isn&amp;rsquo;t actionable - meaning it requires a person or group of people to respond and investigate right away then it&amp;rsquo;s not an incident.&lt;/p&gt;
+&lt;p&gt;If we can measure some minor details about when amd how we detect problems in the first place then we can look for opportunities to improve.&lt;/p&gt;
+&lt;p&gt;In conversations about what took place with the payment processor incident it is reasonable to ask &amp;ldquo;how could we have detected this sooner?&amp;quot;.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;How could we have detected this &amp;hellip; at all?&amp;rdquo; may be a better question.&lt;/p&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;Next steps&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/identifying-the-incident-response-phase/&#34;&gt;Identifying the Response Phase of an Incident&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Identifying the Incident Readiness Phase</title>
+      <link>/post/identifying-the-incident-readiness-phase/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/identifying-the-incident-readiness-phase/</guid>
+      <description>&lt;p&gt;During and after a post-incident review many ideas will surface around how to improve not only various aspects of each phase of the lifecycle but also how the team can improve in other areas. Communication for example.&lt;/p&gt;
+&lt;p&gt;During the review, engineers might have pointed out that there were long gaps in the conversation timeline where nobody said anything. It&amp;rsquo;s helpful to be verbose in what engineers are doing, thinking, even feeling. If someone isn&amp;rsquo;t completely comfortable following the steps from documentation, we should address that. Who else on the team carries fears about performing actions on the system during an incident? We want our team to be confident and ready.&lt;/p&gt;
+&lt;p&gt;So, what did we learn that helps improve that readiness?&lt;/p&gt;
+&lt;p&gt;Action items aren&amp;rsquo;t really the point of a post-incident reivew but inevitably, creative ideas will emerge. Some engineering efforts will make sense to schedule and implement as a result of the conversations. Adding telemetry to help keep a better eye on the credit card processing system, for example.&lt;/p&gt;
+&lt;p&gt;Product and engineering teams should work together to prioritize and schedule work for those enhancements. Tradeoffs will be made since the uptime of a new feature is just as important as the feature itself. Ultimately, what&amp;rsquo;s best for the business is what leadership will have to wrestle with.&lt;/p&gt;
+&lt;p&gt;The bigger win that helps with our readiness efforts is that we have measurements by which we can set goals around.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/understanding-the-foundations-of-incident-response/&#34;&gt;Understanding the Foundations of Incident Response&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Identifying the Response Phase of an Incident</title>
+      <link>/post/identifying-the-incident-response-phase/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/identifying-the-incident-response-phase/</guid>
+      <description>&lt;p&gt;Once our detection efforts have been configured to send actionable alerts to the people who build the systems, we need to make sure they are sending those alerts to the &lt;em&gt;right&lt;/em&gt; people.&lt;/p&gt;
+&lt;h2 id=&#34;right-people&#34;&gt;Right People&lt;/h2&gt;
+&lt;p&gt;How do you know who the right people are? In most cases it is situational. A few things that can be done to help establish some formatlity and standard around responding to incidents is through the use of roles, rosters, and rotations. We&amp;rsquo;ll go more in depth on what each of those are soon.&lt;/p&gt;
+&lt;h2 id=&#34;tooling&#34;&gt;Tooling&lt;/h2&gt;
+&lt;p&gt;The right person for the job needs the right tools for the job. If someone is responding to an issue they need to get busy immediately. Making sure the right monitoring, communications, access, and documentation is provided is also important. People should be familiar with the tooling and know how and where to find additional resources to help diagnose, theorize, and triage.&lt;/p&gt;
+&lt;h3 id=&#34;diagnose&#34;&gt;Diagnose&lt;/h3&gt;
+&lt;p&gt;Everyone experiences problems. Sometimes routinely throughout the day in fact. When something doesn&amp;rsquo;t go as expected or breaks entirely our impulse is to fix it. In order to do so we must first have a look at what&amp;rsquo;s currently observable. What is the status? Who and what is impacted? What hints or clues are there? What information do we have to work with?&lt;/p&gt;
+&lt;p&gt;What do we know &lt;em&gt;right now?&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;theorize&#34;&gt;Theorize&lt;/h3&gt;
+&lt;p&gt;Once information has been obtained, we begin to theorize next best steps.
+What action can we take to minimize or stop the impact? What are the repurcussions of that action? Will something else go wrong? If we take one action, what result do we expect? In very brief moments we are creatively thinking through as many possible scenarios to restore service as we can. And then stack ranking them based on our own calculations on the probability of success.&lt;/p&gt;
+&lt;h3 id=&#34;triage&#34;&gt;Triage&lt;/h3&gt;
+&lt;p&gt;At some point we all need help. That could be access to an admin account, theories from subject matter experts, someone to amplify updates to a broader audience. Rarely are incidents viewed as a success if only a single person was involved.&lt;/p&gt;
+&lt;p&gt;Regardless of the size of your response team, by isolating it as a phase in the incident lifecycle, we can examine this section of the timeline for improvements on how we coordinate our response. If it took an excessive amount of time for the engineering team to correct the payment processor problem simply because it took too long to find the right person, with the right tool, and with the appropriate level of access then there are some clear opportunities for improvement right there.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/identifying-the-incident-remediation-phase/&#34;&gt;Identifying the Remediation Phase of an Incident&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Improving the Remediation of Incidents</title>
+      <link>/post/improving-the-remediation-of-incidents/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/improving-the-remediation-of-incidents/</guid>
+      <description>&lt;p&gt;Although thinking of incidents in terms of phases allows for us to shorten each in their own unique ways, responding to and remediating an incident often begin to blur. Especially when actions to mitigate or improve the situation, have the opposite result.&lt;/p&gt;
+&lt;p&gt;Now that we’ve covered the foundations of building a good incident response plan, let&amp;rsquo;s talk about remediation efforts and how 
+&lt;a href=&#34;/post/supplying-context-and-guidance/&#34;&gt;Supplying Context &amp;amp; Guidance&lt;/a&gt; to on-call engineers rather than step by step procedures can dramatically help reduce the impact of an incident.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

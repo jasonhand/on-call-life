@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>durability | On Call Life</title>
+    <link>/tags/durability/</link>
+      <atom:link href="/tags/durability/index.xml" rel="self" type="application/rss+xml" />
+    <description>durability</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>durability</title>
+      <link>/tags/durability/</link>
+    </image>
+    
+    <item>
+      <title>Exploring the Durability Aspect of Reliability</title>
+      <link>/post/exploring-the-durability-aspect-of-reliability/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/exploring-the-durability-aspect-of-reliability/</guid>
+      <description>&lt;p&gt;Durability generally relates to longevity and resilience. It’s the ability to remain functional over time.&lt;/p&gt;
+&lt;p&gt;Durability is especially important in situations such as storage systems where it is really crucial that a bit written to the service can be read back out again later when desired.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;/post/exploring-the-fidelity-aspect-of-reliability/&#34;&gt;Exploring the Fidelity Aspect of Reliability&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
