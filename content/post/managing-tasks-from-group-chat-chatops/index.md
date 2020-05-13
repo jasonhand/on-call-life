@@ -14,4 +14,4 @@ One great example of Chatops is when engineers can update important information 
 
 Allowing people to quickly update stakeholders by typing a few quick commands from within the same environment as the related conversations has a number of clear benefits.
 
-Let's take a look at [Building a Serverless Status Page Solution with Azure Functions, blob storage, and Microsoft Teams](/post/building_a_serverless_status_page_solution/) to illustrate.
+Let's take a look at [Building a Serverless Status Page Solution with Azure Functions, blob storage, and Microsoft Teams](/post/building-a-serverless-status-page-solution/) to illustrate.
