@@ -16,11 +16,11 @@ slides: example
 
 Useful links:
 
-- [azure.microsoft.com](https://azure.microsoft.com/?wt.mc_id=oncalllife-blog-jahand)
-- [docs.microsoft.com](https://docs.microsoft.com/?wt.mc_id=oncalllife-blog-jahand)
-- [channel9.msdn.com](https://channel9.msdn.com/?wt.mc_id=oncalllife-blog-jahand)
-- [code.visualstudio.com](https://code.visualstudio.com/?wt.mc_id=oncalllife-blog-jahand)
-- [cloudblogs.microsoft.com](https://cloudblogs.microsoft.com/?wt.mc_id=oncalllife-blog-jahand)
-- [devblogs.microsoft.com](https://devblogs.microsoft.com/?wt.mc_id=oncalllife-blog-jahand)
-- [marketplace.visualstudio.com](https://marketplace.visualstudio.com/?wt.mc_id=oncalllife-blog-jahand)
-- [techcommunity.microsoft.com](https://techcommunity.microsoft.com/?wt.mc_id=oncalllife-blog-jahand)
+- [azure.microsoft.com](https://jhand.dev/4)
+- [docs.microsoft.com](https://jhand.dev/5)
+- [channel9.msdn.com](https://jhand.dev/6)
+- [code.visualstudio.com](https://jhand.dev/7)
+- [cloudblogs.microsoft.com](https://jhand.dev/8)
+- [devblogs.microsoft.com](https://jhand.dev/9)
+- [marketplace.visualstudio.com](https://jhand.dev/10)
+- [techcommunity.microsoft.com](https://jhand.dev/11)
