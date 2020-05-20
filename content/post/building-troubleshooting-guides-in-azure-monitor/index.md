@@ -8,7 +8,7 @@ tags: ["troubleshooting", "guide", "context", "runbook", "azure monitor"]
 editable: true
 ---
 
-Also referred to as [Workbooks in Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-workbooks/?WT.mc_id=oncalllife-blog-jahand), interactive reports can be quickly built to provide critical information to first responders as they begin to investigate and take early remediation efforts.
+Also referred to as [Workbooks in Azure Monitor](https://jhand.dev/39), interactive reports can be quickly built to provide critical information to first responders as they begin to investigate and take early remediation efforts.
 
 Guides can include data from sources such as logs, metrics, and more through visualizations like charts, grids, graphs, and text.
 

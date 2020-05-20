@@ -25,8 +25,7 @@ benefit from those lessons without personally suffering the consequences.
 In this unit, you’ll find out about some common traps that others have fallen
 into during the post-incident review process and how to avoid them.
 
-## Trap 1: Attribution to “human error”
-
+## Trap 1: “Human error” as causation
 
 
 ## Trap 2: Counterfactual reasoning

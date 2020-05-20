@@ -14,7 +14,7 @@ Digital services have become so embedded in our daily lives that when they becom
 
 ## Monitoring
 
-Monitoring is a way of collecting information about what is going on in your systems so you can improve things as well as make objectively informed decisions. [Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/overview/?wt_mc_id=oncalllife-blog-jahand) is an example of tooling that allows this type of collection and analysis.  
+Monitoring is a way of collecting information about what is going on in your systems so you can improve things as well as make objectively informed decisions. [Azure Monitor](https://www.jhand.dev/35) is an example of tooling that allows this type of collection and analysis.  
 
 Many aspects of a system can be monitored. From the component level (CPU, Memory) to business impact and everything in between. We might gauge performance, examine security, or (in our case) evaluate and improve reliability.
 

@@ -27,7 +27,7 @@ investigate and intervene to remediate the problem. Alerts should be
 communications that something exceptional or unexpected has happened that
 requires someone’s attention.
 
-A lot of thought should be put in to how alerts are delivered and when it is necessary. [More on how to configure alerts in Azure can be found here](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-overview/?wt.mc_id=oncalllife-blog-jahand).
+A lot of thought should be put in to how alerts are delivered and when it is necessary. [More on how to configure alerts in Azure can be found here](https://www.jhand.dev/37).
 
 If the event is something that the system can handle through automated
 processes, such as scaling resources within a preset limit, an alert is not

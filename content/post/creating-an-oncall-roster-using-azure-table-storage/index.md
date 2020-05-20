@@ -28,7 +28,7 @@ One way of creating an on-call roster is with a basic storage table in Azure.
 ## Setup
 
 {{% alert warning %}}
-First, login or create a [free Azure account](https://azure.microsoft.com/?wt.mc_id=oncalllife-blog-jahand).
+First, login or create a [free Azure account](https://www.jhand.dev/38).
 {{% /alert %}}
 
 **1.** Create a new resource

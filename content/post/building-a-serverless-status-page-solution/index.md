@@ -29,8 +29,8 @@ Application Insights is used to provide observability on the operation, behavior
 
 You will need an account with the following services: 
 
-- [Microsoft Azure](https://cda.ms/16X)
-- [Microsoft Teams](https://cda.ms/17f)
+- [Microsoft Azure](https://jhand.dev/40)
+- [Microsoft Teams](https://jhand.dev/41)
 
 ---
 
@@ -84,7 +84,7 @@ Available commands are:
 
 This solution is based on the on-stage demonstrations built for Microsoft Ignite The Tour.
 
-To learn more about the full demonstration, view the repo for "[OPS20 - Responding To Incidents](https://myignite.techcommunity.microsoft.com/sessions/82997/?WT.mc_id=oncalllife-blog-jahand)". Huge Thanks to [Anthony Chu](https://github.com/anthonychu) in bringing this to life.
+To learn more about the full demonstration, view the repo for "[OPS20 - Responding To Incidents](https://jhand.dev/42)". Huge Thanks to [Anthony Chu](https://github.com/anthonychu) in bringing this to life.
 
 Now, let's move on to 
 [Understanding Why We Learn From Incidents](/post/understanding-why-we-learn-from-incidents/).

@@ -13,7 +13,7 @@ Tracking incidents is as easy as setting up a datastore, like the table storage 
 Azure Boards is my tool of choice in this tutorial, but honestly this could probably be done with any popular project management tool with an API.
 
 {{% alert warning %}}
-First, login or create a [free Azure **Devops** account](https://azure.microsoft.com/?wt.mc_id=oncalllife-blog-jahand).
+First, login or create a [free Azure **Devops** account](https://jhand.dev/38).
 {{% /alert %}}
 
 **1.** Select an existing or create a new project in **Azure Devops**

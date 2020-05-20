@@ -18,7 +18,7 @@ They demand fast performance and have little patience with a site or service tha
 
 Especially for external customer interactions – for example, when a customer visits your company’s website – it is critical that the service respond as quickly as possible. A slow website can drive your customers to your competitors.
 
-Azure is always [monitoring latency from points all around the world](https://docs.microsoft.com/en-us/azure/networking/azure-network-latency/?wt.mc_id=oncalllife-blog-jahand) to ensure speeds are within pre-defined limits.
+Azure is always [monitoring latency from points all around the world](https://www.jhand.dev/36) to ensure speeds are within pre-defined limits.
 
 ![azure latency](https://docs.microsoft.com/en-us/azure/networking/media/azure-network-latency/azure-network-latency.png)
 
