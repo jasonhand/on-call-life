@@ -22,12 +22,6 @@ Azure is always [monitoring latency from points all around the world](https://ww
 
 ![azure latency](https://docs.microsoft.com/en-us/azure/networking/media/azure-network-latency/azure-network-latency.png)
 
-Let's say your service is available and fast, what else might users care about?
-
-If your service returns the wrong thing, it’s not reliable in the eyes of your customers. 
-
-It's supposed to work as advertised. If it returns the wrong results, calculates a bad value, or generally doesn't do what it's supposed to do "correctly", it's not relable to the user. Who wants to use a service that can't calculate for leap year, let alone manage your bank account?
-
 [Take a look at the latency of Azure datacenters from your current location](http://azurespeedtest.azurewebsites.net/)
 
 [![](latency-speed.gif)](http://azurespeedtest.azurewebsites.net/)
@@ -37,3 +31,9 @@ It's supposed to work as advertised. If it returns the wrong results, calculates
 [![](latency-test.gif)](https://azurespeed.com/)
 
 [Exploring the Correctness Aspect of Reliability](/post/exploring-the-correctness-aspect-of-reliability/)
+
+Let's say your service is available and fast, what else might users care about?
+
+If your service returns the wrong thing, it’s not reliable in the eyes of your customers. 
+
+It's supposed to work as advertised. If it returns the wrong results, calculates a bad value, or generally doesn't do what it's supposed to do "correctly", it's not relable to the user. Who wants to use a service that can't calculate for leap year, let alone manage your bank account?
