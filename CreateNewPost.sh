@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 
-wget -O https://jhandcdn.blob.core.windows.net/blob/hugo/Automating-On-Call-Posts.md
-
-mkdir content/post/Automating-On-Call-Posts
-mv Automating-On-Call-Posts.md content/post/Automating-On-Call-Posts/index.md
+###
+wget https://jhandcdn.blob.core.windows.net/blob/hugo/Getting-Lunch.md
+###
+mkdir content/post/Getting-Lunch 
+mv Getting-Lunch.md content/post/Getting-Lunch/index.md
 
 # Git Steps
 # echo "Pushing to GitHub"
-git add content/post/Automating-On-Call-Posts/index.md
-git commit -m "Automating-On-Call-Posts"
+git add content/post/Getting-Lunch/index.md
+git commit -m "Getting-Lunch"
 git push origin master
 echo "######################"
 echo "This has completed"
