@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-wget 'https://jhandcdn.blob.core.windows.net/blob/hugo/Automating-On-Call-Posts.md'
+###
+wget 'https://jhand.co/2BFmMty'
 
-mv Automating-On-Call-Posts.md content/post/
+###
+mv Automating-On-Call-Posts.md content/post/Automating-On-Call-Posts/index.md
 echo "You should take a look and see if the file downloaded. If not..."
 echo "type .... wget "
 echo "then paste in "
